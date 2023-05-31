@@ -5,7 +5,7 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 1. [Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-1-inception-of-opensource-eda-openlane-and-sky130-pdk)
    - [How to Talk to computers](#how-to-talk-to-computers)
      - [Introduction to QFN48 Package](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
-     - [Introduction to RISCV ISA](#intoduction-to-riscv-isa)
+     - [Introduction to RISCV ISA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-riscv-isa)
      - [From Software Applications to Hardware](#from-software-to-hardware) 
    - [SOC Design & OpenLANE](#soc-design--openlane)
      - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)

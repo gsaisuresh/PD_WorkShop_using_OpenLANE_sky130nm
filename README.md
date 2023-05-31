@@ -18,6 +18,6 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
      - [Design Preparation Step](#design-preparation-step)
      - [Review of files & Synthesis step](#design-preparation-step#review-of-files-&-synthesis-step)
 
-## Day-1 : Inception of Opensource EDA, OpenLANE and Sky130 PDK
+## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
 ## How to Talk to computers

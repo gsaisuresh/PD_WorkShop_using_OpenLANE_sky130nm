@@ -69,4 +69,19 @@ Open Souce ASIC design consists of following components :
 - **Opensource EDA tools** : Qflow, OpenROAD, OpenLANE
 - **Opensource PDK data** : Google + Skywater130 PDK
 
+- **PDK(Process Design Kit)** : A set of data files and documents which serves as the interface between the designer and the fab. This includes standard cell libraries, IO libraries, process design rules (DRC, LVS, etc.) or A collection of files used to model a fabrication process for the EDA tools used to design an IC
+
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c881d19b-e12f-4990-aca4-d3a6d932963c)
+
+#### Simplified RTL2GDS Flow
+
+The ASIC flow objective is to convert RTL design to GDSII format used for final layout. The flow is also known as an automated PnR (Place & route). RTL2GDS flow is as follows : 
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/064647c7-4ec1-48a7-94b5-c97449d42826)
+
+- **Synthesis** : The process of converting a Technology independent RTL into a Technology dependent gate level netlist.
+- **Floor Planning + Power Planning** : In this step, the rough position of each block on the silicon chip and the shape of each block will be decided,Placement of I/O and macros takes place in this step and silicon area is planned accordingly also a robust power distribution network is created. The power network usually uses the upper metal layer which are thicker than lower layer and thus lower resistance. This lowers the IR drop problem. 
+- **Placement** : In this step, the exact position of various sub-blocks will be decided with the objective of maintaining adequate space between various blocks, so that, Vdd and Ground supply lines and the interconnection wires can be routed in such a way that, there will be no clutter, This step consists of 2 stages - Global Placement which is for optimal position of cells for inital congestion analysis and Detailed Placement which has legalized placement of cells and no overlapping of cells.
+- **CTS(Clock Tree Synthesis)** : After the completion of floor planning and placement, millions of flip-flops in the complex circuit will be scattered at multiple places on the silicon chip, so that the transmission delays of the clock signal for all the flip-flops will not be the same. The clock will not arrive/reach all the flip-flops at the same time and it is mandatory to make sure that, the clock signal reaches multiple flip-flops with no or minimum skew difference. CTS will ensure that the clock reaches various flip-flops almost at the same time. In the clock tree synthesis process, any one of the standard Tree topology structures such as X-tree, H-tree, I-tree will be implemented in the design with an intention of making the length of all the wires in the clock distribution network equal.
+- **Routing** : In this step, interconnecting wires between various blocks will be routed in such a way that, the length of the interconnecting wires will be minimum for meeting the timing requirements and for ensuring that, the chip area will not be increased. Proper routing will also ensure that there are no congestion hotspots in the chip so that, the probability of having faults during the fabrication will be less. The router uses PDK information (thickness, pitch, width,vias) for each metal layer to do the routing. The Sky130 defines 6 routing layers. It do global routing and detailed routing.
+- **Signoff** : Involves physical verification checks like DRC, LVS, ERC and timing verification. Design Rule Checking or DRC ensures final layout honors all design rules and Layout versus Schematic or LVS ensures final layout matches the gate level netlist from synthesis phase. Timing verification ensures timing constraints are met.

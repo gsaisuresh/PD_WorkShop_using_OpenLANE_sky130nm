@@ -4,8 +4,8 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 ## Table of Contents
 1. [Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK](#inception-of-opensource-eda)
    - [How to Talk to computers](#how-to-talk-to-computers)
-     - [Introduction to QFN-48 Package, chip, pads, core, die and IPs](#introduction-to-QFN-48)
-     - [Introduction to RISC-V](#intoduction-to-riscv)
+     - [Introduction to QFN48 Package](#introduction-to-QFN48-package)
+     - [Introduction to RISCV](#intoduction-to-riscv)
      - [From Software Applications to Hardware](#from-software-to-hardware) 
    - [SOC Design & OpenLANE](#soc-design--openlane)
      - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)

@@ -7,10 +7,10 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
      - [Introduction to QFN48 Package](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
      - [Introduction to RISCV ISA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-riscv-isa)
      - [From Software Applications to Hardware](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#from-software-applications-to-hardware) 
-   - [SOC Design & OpenLANE](#soc-design--openlane)
-     - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)
-     - [Simplified RTL2GDS Flow](#simplified-rtl2gds-flow)
-     - [OpenLANE ASIC Flow](#openlane-asic-flow)
+   - [SOC Design and OpenLANE](#soc-design-and-openlane)
+     - [Introduction to open-source digital asic design]()
+     - [Simplified RTL2GDS Flow]()
+     - [OpenLANE ASIC Design Flow]()
    - [Opensource EDA tools](#opensource-eda-tools)
      - [OpenLANE design stages](#openlane-design-stages)
      - [OpenLANE Files](#openlane-files)
@@ -54,3 +54,19 @@ Application software enters into a block called as system software, and system s
 We start from the instruction set, we try to get the specifications of the instruction set,we write a hardware description language of these instructions, we then synthesize it to gate level netlist and this gate level netlist is converted into its respective layout based on the RTL to GDS flow.
 
 ![Screenshot (7480)](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5786c64d-c320-4fef-bb46-1db314129866)
+
+### SOC Design and OpenLANE
+
+#### Introduction to open-source digital asic design
+
+The Digital Application Specific Integrated Circuit (ASIC) design requires three enablers or elements - Resistor Transistor Logic Intellectual Property (RTL IPs), Electronic Design Automation (EDA) Tools and Process Design Kit (PDK) data.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/73fabc02-084c-4a71-a10d-3ec52a55195e)
+
+Open Souce ASIC design consists of following components :
+
+- **Opensource RTL Designs** : github, librecores, opencores
+- **Opensource EDA tools** : Qflow, OpenROAD, OpenLANE
+- **Opensource PDK data** : Google + Skywater130 PDK
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c881d19b-e12f-4990-aca4-d3a6d932963c)

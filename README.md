@@ -9,7 +9,7 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
      - [From Software Applications to Hardware](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#from-software-applications-to-hardware) 
    - [SOC Design and OpenLANE](#soc-design-and-openlane)
      - [Introduction to open-source digital asic design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#introduction-to-open-source-digital-asic-design)
-     - [Simplified RTL2GDS Flow]()
+     - [Simplified RTL2GDS Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#simplified-rtl2gds-flow)
      - [OpenLANE ASIC Design Flow]()
    - [Opensource EDA tools](#opensource-eda-tools)
      - [OpenLANE design stages](#openlane-design-stages)

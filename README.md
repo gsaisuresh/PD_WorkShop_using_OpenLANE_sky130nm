@@ -20,4 +20,6 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
-## How to Talk to computers
+### How to Talk to computers
+
+#### Introduction to QFN-48 Package, chip, pads, core, die and IPs

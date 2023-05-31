@@ -6,7 +6,7 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
    - [How to Talk to computers](#how-to-talk-to-computers)
      - [Introduction to QFN48 Package](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
      - [Introduction to RISCV ISA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-riscv-isa)
-     - [From Software Applications to Hardware](#from-software-to-hardware) 
+     - [From Software Applications to Hardware](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#from-software-applications-to-hardware) 
    - [SOC Design & OpenLANE](#soc-design--openlane)
      - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)
      - [Simplified RTL2GDS Flow](#simplified-rtl2gds-flow)

@@ -25,3 +25,16 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 #### Introduction to QFN-48 Package, chip, pads, core, die and IPs
 The QFN-48 Package with quad flat no leads looks as follows 
 ![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/225fb7a4-5f55-46c9-9e73-83aeebdcdfa1)
+
+The chip sits at the center of the package and the chip is connected to package using wirebonds 
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/31884276-f9b0-477d-a79c-38240213cba1)
+
+The core of the chip will contain two types of blocks:
+
+- **Foundry IP's**  are the  blocks which requires some amount of intelligent techniques to build which can only be designed by foundries, some examples of Foundry IP's are ADC,DAC,SRAM and PLL.
+- **Macro** are the blocks consisting of pure digital logic compared to IP's which might require some analog parts, example of macros are RISC-V SOC and SPI.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/612618fb-247a-4aac-8bea-f3e83123b29b)
+
+

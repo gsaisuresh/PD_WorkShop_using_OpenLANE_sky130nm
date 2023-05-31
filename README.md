@@ -4,7 +4,7 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 ## Table of Contents
 1. [Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-1-inception-of-opensource-eda-openlane-and-sky130-pdk)
    - [How to Talk to computers](#how-to-talk-to-computers)
-     - [Introduction to QFN48 Package](#introduction-to-QFN48-package)
+     - [Introduction to QFN48 Package](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
      - [Introduction to RISCV](#intoduction-to-riscv)
      - [From Software Applications to Hardware](#from-software-to-hardware) 
    - [SOC Design & OpenLANE](#soc-design--openlane)
@@ -23,3 +23,5 @@ This project is done as part of VLSI Physical Design Work-Shop orgaised by VLSI 
 ### How to Talk to computers
 
 #### Introduction to QFN-48 Package, chip, pads, core, die and IPs
+The QFN-48 Package with quad flat no leads looks as follows 
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/225fb7a4-5f55-46c9-9e73-83aeebdcdfa1)

@@ -15,7 +15,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [OpenLANE Directory structure](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-directory-structure)
      - [Design Preparation Step](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#design-preparation-step)
      - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep-run-synthesis)
-     - [Review of files & Synthesis step](#design-preparation-step#review-of-files-&-synthesis-step)
+     - [Steps to characterize synthesis results](#design-preparation-step#review-of-files-&-synthesis-step)
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
@@ -226,6 +226,28 @@ OpenLane invokes the following
 - `OpenSTA` - This does the Static Timing Analysis on the netlist generated after synthesis and generated the timing reports 
 
 ![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7b012395-5af6-4d90-92c4-017c6cc95fdf)
+
+#### Steps to characterize synthesis results
+
+Calcuation of Flop Ratio:
+
+Flop ratio = Number of D Flip flops 
+             ______________________
+             Total Number of cells
+             
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c291849e-e812-4e2f-b247-79fdd84a3176)
+
+Number of cells :  14876 
+Number of dfxtp_2 cells : 1613
+Flop Ratio : 0.1084
+
+Now we check results folder in synthesis step, it should have synthesized netlist.
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b2c37865-65e9-41dc-b2d4-0278e30dc17b)
+
+we can observe picorv32a.synthesis.v synthesized netlist is created.
+
+
 
 
 

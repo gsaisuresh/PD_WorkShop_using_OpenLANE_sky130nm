@@ -86,3 +86,13 @@ The ASIC flow objective is to convert RTL design to GDSII format used for final 
 - **Routing** : In this step, interconnecting wires between various blocks will be routed in such a way that, the length of the interconnecting wires will be minimum for meeting the timing requirements and for ensuring that, the chip area will not be increased. Proper routing will also ensure that there are no congestion hotspots in the chip so that, the probability of having faults during the fabrication will be less. The router uses PDK information (thickness, pitch, width,vias) for each metal layer to do the routing. The Sky130 defines 6 routing layers. It do global routing and detailed routing.
 - **Signoff** : Involves physical verification checks like DRC, LVS, ERC and timing verification. Design Rule Checking or DRC ensures final layout honors all design rules and Layout versus Schematic or LVS ensures final layout matches the gate level netlist from synthesis phase. Timing verification ensures timing constraints are met.
 
+#### OpenLANE ASIC Design Flow
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/31d5f2c8-de11-4e50-8a91-398a133acf66)
+
+OpenLANE started as an open source flow for a true open-source tape-out experiment, at efabless we have family of SoC's called as strive and we wanted to have open everything SoC (Open PDK, Open EDA, Open RTL). OpenLANE is tuned for SkyWater-130nm Open PDK and it also supports XFAB180 and GF130G. It has two modes of operation : 
+
+* Autonomous : it performs all of the ASIC flow in one step
+* Interactive : It is a step-by-step process to perform every phase of ASIC flow with specific commands.
+
+

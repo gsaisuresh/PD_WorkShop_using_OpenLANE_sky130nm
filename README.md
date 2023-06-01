@@ -160,4 +160,30 @@ OpenLane integrated several key open source tools over the execution stages:
 ### Day-1 Lab : Get familiar to open-source EDA tools
 
 #### OpenLANE Directory structure
+We will be working in `openlane_working_dir` inside the working directory there are two directories named as openlane and pdks, we will be working in openlane directory, pdks directory has all the information related to pdk the pdk we use for this workshop is skywater_130nm pdk. 
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c663631f-ff3d-4dd2-9498-4be46ce5cfa7)
+
+Inside the pdks directory there are 3 directories skywater-pdk, open_pdks, sky130A. skywater-pdk contains all the pdk related files such as timing libraries, .lef files(cell lef and tech lef), etc. open_pdks has set of scripts and files that convert the foundry level pdks to be compatible with opensource EDA tools like magic, netgen. Sky130A is pdk variant which is compatible with opensouce environment. 
+
+![2  ](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/dd9d4691-3139-464a-8424-ba4ef68b1173)
+
+Inside the Sky130A directory there are two directories libs.tech and libs.ref. libs.ref contains all the process specific files such as timing, cell lib etc. libs.tech are those files which are specific to tool.
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6fa89602-eb15-45fb-bb8e-f504cfe3cdbe)
+
+we would be working on pdk variant `sky130_fd_sc_hd` which means sky130 refers to process name which is sky130nm, fd refers to the foundry name, sc refers to standard cell library files, hd refers to variant of pdk hd stands for high density. 
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/42186708-1326-4999-a2cc-be72bfbaceae)
+
+Now lets see whats inside `sky130_fd_sc_hd` directory.
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/30db3a09-aa90-436e-8dd6-b388ce3f58ff)
+
+We can observe all the technology files such as techlef files which contains the layer information, lib files has timing information for many process corners.  
+
+
+
+
+
 

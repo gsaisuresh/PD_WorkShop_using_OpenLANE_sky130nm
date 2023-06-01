@@ -14,7 +14,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Day-1 Lab : Get familiar to open-source EDA tools](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-1-lab--get-familiar-to-open-source-eda-tools)
      - [OpenLANE Directory structure](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-directory-structure)
      - [Design Preparation Step](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#design-preparation-step)
-     - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep)
+     - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep-run-synthesis)
      - [Review of files & Synthesis step](#design-preparation-step#review-of-files-&-synthesis-step)
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK

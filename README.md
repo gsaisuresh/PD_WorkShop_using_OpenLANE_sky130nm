@@ -249,6 +249,17 @@ Now we check results folder in synthesis step, it should have synthesized netlis
 
 we can observe picorv32a.synthesis.v synthesized netlist is created.
 
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f34ecaff-c924-4667-9fd0-b889d3b8a427)
+
+The synthesis statistics report can be accessed within the reports directory. The synthesis timing reports are as follows : 
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/0cb00c5e-7f49-47a3-8ea8-c89deddce410)
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c1c0e76c-008d-4e00-85a6-a8fb6727309d)
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2ce0b0f8-9f7c-463c-ab57-94f31218a6bd)
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1f7bdfd3-057c-4d61-bed6-5528a138a7e8)
 
 
 

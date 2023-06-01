@@ -104,3 +104,57 @@ OpenLANE flow consists of several stages. By default all flow steps are run in s
    
    The flow starts with RTL Synthesis, so the RTL is fed to `yosys` with the design constraints, `yosys` translates the RTL into a logic circuit using generic components, this circuit can be optimized and then mapped into cells from the standard cell library using `abc`. `abc` has to be guided during the optimization, and this guidence comes in the form of abc scripts. OpenLANE comes with several abc scripts, we refer them as synthesis strategies. Different strategies can be used to synthesize for the either the least area or the best timing. To analyse this, synthesis exploration utility generates a report showing the effect on delays/timing/area etc. Also openlane has design exploration utility which generate reports with different metrics to select the best. 
     
+2. **DFT Insertion** : After Synthesis comes the dft insertion, which is optional this step uses open-source project Fault to perform Scan Insertion, Automatic Test Pattern Generation (ATPG), Test Pattern Compaction, Fault Coverage and Fault Simultion.
+
+3. **Floorplan and PDN**
+    1. `init_fp` - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+    2. `ioplacer` - Places the macro input and output ports
+    3. `pdn` - Generates the power distribution network
+    4. `tapcell` - Inserts welltap and decap cells in the floorplan
+    
+   This is done by OpenROAD App for this, In this step the goal is to plan the silicon area and create a robust power distribution network (PDN) to power each of the individual components of the synthesized netlist. 
+   
+4. **Placement**
+    1. `RePLace` - Performs global placement
+    2. `Resizer` - Performs optional optimizations on the design
+    3. `OpenDP` - Perfroms detailed placement to legalize the globally placed components
+   
+   Placement is the process of finding a suitable physical location for each cell in the block, it also optimize the design. Placement is performed in two stages : Global Placement and Detail Placement.  In Global Placement the tool determines the approximate location for each cell according to initial timing and congestion constraints, the placed cells donot fall on placement grid and might overlap each other. Detailed placement takes the global placement into consideration and moves the cells to legal locations on the placement grid and eliminate any overlapping of cells.
+   
+5. **CTS**
+    1. `TritonCTS` - Synthesizes the clock distribution network (the clock tree)
+
+   Clock Tree Synteshsis is used to create the effective clock distribution network that is used to deliver the clock to all sequential elements across the chip. The main goal is to create a network with minimal or balanced skew across the sequential blocks of the chip. Some of the popular Clock tree topologies are H-Tree, X-Tree, I-Tree. 
+   
+6. **Routing**
+    1. `FastRoute` - Performs global routing to generate a guide file for the detailed router
+    2. `CU-GR` - Another option for performing global routing.
+    3. `TritonRoute` - Performs detailed routing
+    4. `SPEF-Extractor` - Performs SPEF extraction
+7. **GDSII Generation**
+    1. `Magic` - Streams out the final GDSII layout file from the routed def
+    2. `Klayout` - Streams out the final GDSII layout file from the routed def as a back-up
+8. **Checks**
+    1. `Magic` - Performs DRC Checks & Antenna Checks
+    2. `Klayout` - Performs DRC Checks
+    3. `Netgen` - Performs LVS Checks
+    4. `CVC` - Performs Circuit Validity Checks
+
+The Skywater 130nm PDK uses 6 metal layers to perform CTS, PDN generation, and interconnect routing.
+
+OpenLane integrated several key open source tools over the execution stages:
+- RTL Synthesis, Technology Mapping, and Formal Verification : [yosys + abc][4]
+- Static Timing Analysis: [OpenSTA][8]
+- Floor Planning: [init_fp][5], [ioPlacer][6], [pdn][16] and [tapcell][7]
+- Placement: [RePLace][9] (Global), [Resizer][15] and [OpenPhySyn][28] (formerly), and [OpenDP][10] (Detailed)
+- Clock Tree Synthesis: [TritonCTS][11]
+- Fill Insertion: [OpenDP/filler_placement][10]
+- Routing: [FastRoute][12] or [CU-GR][36] (Global) and [TritonRoute][13] (Detailed)
+- SPEF Extraction: [SPEF-Extractor][27] (formerly), [OpenRCX][37]
+- GDSII Streaming out: [Magic][14] and [Klayout][35]
+- DRC Checks: [Magic][14] and [Klayout][35]
+- LVS check: [Netgen][22]
+- Antenna Checks: [Magic][14]
+- Circuit Validity Checker: [CVC][31]
+
+

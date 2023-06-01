@@ -143,18 +143,18 @@ OpenLANE flow consists of several stages. By default all flow steps are run in s
 The Skywater 130nm PDK uses 6 metal layers to perform CTS, PDN generation, and interconnect routing.
 
 OpenLane integrated several key open source tools over the execution stages:
-- RTL Synthesis, Technology Mapping, and Formal Verification : [yosys + abc][4]
-- Static Timing Analysis: [OpenSTA][8]
-- Floor Planning: [init_fp][5], [ioPlacer][6], [pdn][16] and [tapcell][7]
-- Placement: [RePLace][9] (Global), [Resizer][15] and [OpenPhySyn][28] (formerly), and [OpenDP][10] (Detailed)
-- Clock Tree Synthesis: [TritonCTS][11]
-- Fill Insertion: [OpenDP/filler_placement][10]
-- Routing: [FastRoute][12] or [CU-GR][36] (Global) and [TritonRoute][13] (Detailed)
-- SPEF Extraction: [SPEF-Extractor][27] (formerly), [OpenRCX][37]
-- GDSII Streaming out: [Magic][14] and [Klayout][35]
-- DRC Checks: [Magic][14] and [Klayout][35]
-- LVS check: [Netgen][22]
-- Antenna Checks: [Magic][14]
-- Circuit Validity Checker: [CVC][31]
+- RTL Synthesis, Technology Mapping, and Formal Verification : yosys + abc
+- Static Timing Analysis: OpenSTA
+- Floor Planning: init_fp, ioPlacer, pdn and tapcell
+- Placement: RePLace(Global), Resizer and OpenPhySyn (formerly), and OpenDP (Detailed)
+- Clock Tree Synthesis: TritonCTS
+- Fill Insertion: OpenDP/filler_placement
+- Routing: FastRoute or CU-GR (Global) and TritonRoute(Detailed)
+- SPEF Extraction: SPEF-Extractor (formerly), OpenRCX]
+- GDSII Streaming out: Magic and Klayout
+- DRC Checks: Magic and Klayout
+- LVS check: Netgen
+- Antenna Checks: Magic
+- Circuit Validity Checker: CVC
 
 

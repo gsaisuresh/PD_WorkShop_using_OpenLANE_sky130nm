@@ -10,7 +10,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [SOC Design and OpenLANE](#soc-design-and-openlane)
      - [Introduction to open-source digital asic design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#introduction-to-open-source-digital-asic-design)
      - [Simplified RTL2GDS Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#simplified-rtl2gds-flow)
-     - [OpenLANE ASIC Design Flow]()
+     - [OpenLANE ASIC Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-asic-design-flow)
    - [Opensource EDA tools](#opensource-eda-tools)
      - [OpenLANE design stages](#openlane-design-stages)
      - [OpenLANE Files](#openlane-files)
@@ -88,11 +88,19 @@ The ASIC flow objective is to convert RTL design to GDSII format used for final 
 
 #### OpenLANE ASIC Design Flow
 
-![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/31d5f2c8-de11-4e50-8a91-398a133acf66)
-
 OpenLANE started as an open source flow for a true open-source tape-out experiment, at efabless we have family of SoC's called as strive and we wanted to have open everything SoC (Open PDK, Open EDA, Open RTL). OpenLANE is tuned for SkyWater-130nm Open PDK and it also supports XFAB180 and GF130G. It has two modes of operation : 
 
 * Autonomous : it performs all of the ASIC flow in one step
 * Interactive : It is a step-by-step process to perform every phase of ASIC flow with specific commands.
 
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/31d5f2c8-de11-4e50-8a91-398a133acf66)
 
+OpenLANE flow consists of several stages. By default all flow steps are run in sequence. Each stage may consist of multiple sub-stages. The flow starts with the design RTL and ends with final layout into GDSII foemat. OpenLANE is based on several open source project such as openROAD, abc, qflow, yosys, Fault and many other. The OpenLANE ASIC flow is as follows.
+
+1. **Synthesis**
+    1. `yosys` - Performs RTL synthesis
+    2. `abc` - Performs technology mapping
+    3. `OpenSTA` - Performs static timing analysis on the resulting netlist to generate timing reports
+   
+   The flow starts with RTL Synthesis, so the RTL is fed to `yosys` with the design constraints, `yosys` translates the RTL into a logic circuit using generic components, this circuit can be optimized and then mapped into cells from the standard cell library using `abc`. `abc` has to be guided during the optimization, and this guidence comes in the form of abc scripts. OpenLANE comes with several abc scripts, we refer them as synthesis strategies. Different strategies can be used to synthesize for the either the least area or the best timing. To analyse this, synthesis exploration utility generates a report showing the effect on delays/timing/area etc. Also openlane has design exploration utility which generate reports with different metrics to select the best. 
+    

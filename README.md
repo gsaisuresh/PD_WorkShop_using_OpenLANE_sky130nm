@@ -11,7 +11,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Introduction to open-source digital asic design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#introduction-to-open-source-digital-asic-design)
      - [Simplified RTL2GDS Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#simplified-rtl2gds-flow)
      - [OpenLANE ASIC Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-asic-design-flow)
-   - [Day-1 Lab : Get familiar to open-source EDA tools](#opensource-eda-tools)
+   - [Day-1 Lab : Get familiar to open-source EDA tools](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-1-lab--get-familiar-to-open-source-eda-tools)
      - [OpenLANE Directory structure](#openlane-design-stages)
      - [Design Preparation Step](#openlane-files)
      - [Invoking OpenLANE](#invoking-openlane)

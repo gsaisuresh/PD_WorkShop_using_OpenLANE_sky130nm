@@ -14,7 +14,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Day-1 Lab : Get familiar to open-source EDA tools](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-1-lab--get-familiar-to-open-source-eda-tools)
      - [OpenLANE Directory structure](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-directory-structure)
      - [Design Preparation Step](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#design-preparation-step)
-     - [Review files after design prep](#design-preparation-step)
+     - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep)
      - [Review of files & Synthesis step](#design-preparation-step#review-of-files-&-synthesis-step)
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
@@ -202,11 +202,11 @@ OpenLANE has close to 30-40 designs, we will be doing for picorv32a
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/59ed49d1-d013-4164-9760-01d2eaf79eee)
 ![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/d3912ccd-dcf4-4efb-b90a-18a65e00053b)
 
-We prepare our design files "picorv32a" with the command `prep -design picorv32a` this merges the tech LEF and cell LEF files and buids a complete directory structure for our run .
+We prepare our design file "picorv32a" with the command `prep -design picorv32a` this merges the tech LEF and cell LEF files and buids a complete directory structure for our run .
 
 ![8  prep](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/16a287d2-1c59-44a9-9bba-0461aa55ec1e)
 
-#### Review files after design prep
+#### Review files after design prep run synthesis
 
 We can observe runs directory is created which has a directory on the name of cuurent day's date which contains the folder structures required by openLANE. 
 

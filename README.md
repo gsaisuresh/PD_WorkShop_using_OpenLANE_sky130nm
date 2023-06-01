@@ -208,7 +208,7 @@ We prepare our design file "picorv32a" with the command `prep -design picorv32a`
 
 #### Review files after design prep run synthesis
 
-We can observe runs directory is created which has a directory on the name of cuurent day's date which contains the folder structures required by openLANE. 
+We can observe runs directory is created within the picorv32a folder, which has a directory on the name of cuurent day's date which contains the folder structures required by openLANE. 
 
 ![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b9efb298-b308-4278-90bc-89aa449c3596)
 
@@ -217,6 +217,16 @@ We can observe runs directory is created which has a directory on the name of cu
 There is a results folder for each of the stage.
 
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8d7ec9f2-5b14-4a2b-9744-2ef87a6904eb)
+
+we run the synthesis of picorv32a design using command `run_synthesis` this will run yosys syntheis and abc. 
+OpenLane invokes the following
+
+- `Yosys` - RTL Synthesis and maps to yosys generic cells
+- `abc` - Technology mapping with the Skywater130 PDK. Here `sky130_fd_sc_hd` Skywater Foundry produced High density standard cells are used.
+- `OpenSTA` - This does the Static Timing Analysis on the netlist generated after synthesis and generated the timing reports 
+
+![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7b012395-5af6-4d90-92c4-017c6cc95fdf)
+
 
 
 

@@ -11,9 +11,9 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Introduction to open-source digital asic design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#introduction-to-open-source-digital-asic-design)
      - [Simplified RTL2GDS Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/tree/main#simplified-rtl2gds-flow)
      - [OpenLANE ASIC Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#openlane-asic-design-flow)
-   - [Opensource EDA tools](#opensource-eda-tools)
-     - [OpenLANE design stages](#openlane-design-stages)
-     - [OpenLANE Files](#openlane-files)
+   - [Day-1 Lab : Get familiar to open-source EDA tools](#opensource-eda-tools)
+     - [OpenLANE Directory structure](#openlane-design-stages)
+     - [Design Preparation Step](#openlane-files)
      - [Invoking OpenLANE](#invoking-openlane)
      - [Design Preparation Step](#design-preparation-step)
      - [Review of files & Synthesis step](#design-preparation-step#review-of-files-&-synthesis-step)
@@ -157,4 +157,7 @@ OpenLane integrated several key open source tools over the execution stages:
 - Antenna Checks: Magic
 - Circuit Validity Checker: CVC
 
+### Day-1 Lab : Get familiar to open-source EDA tools
+
+#### OpenLANE Directory structure
 

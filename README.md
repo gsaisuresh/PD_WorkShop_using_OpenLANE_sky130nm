@@ -182,6 +182,28 @@ Now lets see whats inside `sky130_fd_sc_hd` directory.
 
 We can observe all the technology files such as techlef files which contains the layer information, lib files has timing information for many process corners.  
 
+#### Design Preparation Step
+
+The first lab was to synthesise the RTL code of a picorv32a in the interactive mode using OpenLANE. 
+OpenLANE can be invoked by using `docker` command followed by opening an interactive session. flow.tcl is a script that specifies details for openLANE flow. `./flow.cl` which is script tells how flow has to go `-interactive` option tells tools to run step-by-step process.
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/495388b7-362a-42bc-96fd-04f5549c8581)
+
+import the required pacage of openlane using command `package require openlane 0.9`
+
+![1 4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/ebf16a9a-25b5-41d7-86c9-bc8eddc2ce21)
+
+All the designs that are being run by openLANE are being extracted from the designs directory. 
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/169fa5a9-b4cc-4949-803d-8508e8fb1739)
+
+OpenLANE has close to 30-40 designs, we will be doing for picorv32a 
+
+![3 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e0025ed1-ef37-47a3-819e-8c11a998b75b)
+
+
+
+
 
 
 

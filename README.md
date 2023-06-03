@@ -36,7 +36,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
         - [Cell Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#cell-design-flow) 
         - [Typical characterization flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#typical-characterization-flow)
       - [General timing characterization parameters](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#general-timing-characterization-parameters)
-        - [Timing threshold definitions]()
+        - [Timing threshold definitions](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-threshold-definitions)
         - [Propagation delay and transition time]() 
      
 
@@ -470,7 +470,7 @@ A typical standard cell characterization flow includes the following steps:
 
 #### Timing threshold definitions
 
-Timing Threshold defintion | Value
+Timing Threshold defintions | Value
 ------------ | -------------
 slew_low_rise_thr  | 20% value
 slew_high_rise_thr |  80% value

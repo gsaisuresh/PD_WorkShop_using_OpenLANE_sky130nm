@@ -24,6 +24,13 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [De-coupling capacitors](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#de-coupling-capacitors)
      - [Power planning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#power-planning)
      - [Pin placement and logical cell placement blockage](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#pin-placement-and-logical-cell-placement-blockage)
+    - [Day-2 Lab : Floorplanning]()
+      - [Steps to run floorplan using OpenLANE]()
+      - [Concept of pre-placed cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#concept-of-pre-placed-cells)
+      - [De-coupling capacitors](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#de-coupling-capacitors)
+      - [Power planning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#power-planning)
+      - [Pin placement and logical cell placement blockage](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#pin-placement-and-logical-cell-placement-blockage)
+
 
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
@@ -308,6 +315,19 @@ The connectivity information between the gates is coded using VHDL/Verilog langu
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2adb902d-7e68-4021-9f55-a2729888c5a2)
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c38c4240-9251-417e-9a46-584221f5b177)
 
+### Day-2 Lab : Floorplanning
+
+#### Steps to run floorplan using OpenLANE
+
+Floorplan envrionment variables or switches:
+- `FP_CORE_UTIL` - floorplan core utilisation
+- `FP_ASPECT_RATIO` - floorplan aspect ratio
+- `FP_CORE_MARGIN` - Core to die margin area
+- `FP_IO_MODE` - defines pin configurations (1 = equidistant/0 = not equidistant)
+- `FP_CORE_VMETAL` - vertical metal layer
+- `FP_CORE_HMETAL` - horizontal metal layer
+
+OpenLANE Priority order of files:
 
 
 

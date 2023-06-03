@@ -497,6 +497,7 @@ Propagation delay = time(out_fall_thr) - time(in_rise_thr)
 Fall transition time: time(slew_high_fall_thr) - time(slew_low_fall_thr)
 Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 ```
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/652efed0-b54b-45da-a0b2-35c3e2fb9c2f)
 
 
 

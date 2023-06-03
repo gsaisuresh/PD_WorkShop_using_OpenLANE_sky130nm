@@ -27,7 +27,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
     - [Day-2 Lab : Floorplanning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-2-lab--floorplanning)
       - [Steps to run floorplan using OpenLANE](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#steps-to-run-floorplan-using-openlane)
       - [Review floorplan files and steps to view floorplan](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-files-and-steps-to-view-floorplan)
-      - [Review floorplan layout in Magic]()
+      - [Review floorplan layout in Magic](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-layout-in-magic)
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 

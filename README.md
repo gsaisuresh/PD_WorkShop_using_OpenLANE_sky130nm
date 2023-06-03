@@ -24,7 +24,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [De-coupling capacitors](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#de-coupling-capacitors)
      - [Power planning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#power-planning)
      - [Pin placement and logical cell placement blockage](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#pin-placement-and-logical-cell-placement-blockage)
-    - [Day-2 Lab : Floorplanning]()
+    - [Day-2 Lab : Floorplanning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-2-lab--floorplanning)
       - [Steps to run floorplan using OpenLANE]()
       - [Concept of pre-placed cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#concept-of-pre-placed-cells)
       - [De-coupling capacitors](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#de-coupling-capacitors)

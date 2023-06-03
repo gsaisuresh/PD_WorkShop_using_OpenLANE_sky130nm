@@ -28,7 +28,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Steps to run floorplan using OpenLANE](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#steps-to-run-floorplan-using-openlane)
       - [Review floorplan files and steps to view floorplan](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-files-and-steps-to-view-floorplan)
       - [Review floorplan layout in Magic](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-layout-in-magic)
-     - [Library Binding and Placement]()
+     - [Library Binding and Placement](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#library-binding-and-placement)
        - [Netlist binding and initial place design]()
        - [Optimize placement using estimated wire-length and capacitance]()
        - [Congestion aware placement using RePlAce]()

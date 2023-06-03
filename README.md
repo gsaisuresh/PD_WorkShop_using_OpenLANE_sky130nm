@@ -32,6 +32,9 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
        - [Netlist binding and initial place design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#netlist-binding-and-initial-place-design)
        - [Optimize placement using estimated wire-length and capacitance](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#optimize-placement-using-estimated-wire-length-and-capacitance)
        - [Day-2 Lab : Placement - Congestion aware placement using RePlAce](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#congestion-aware-placement-using-replace)
+      - [Cell design and characterization flows]()
+        - [Cell Design Flow]() 
+        - [Typical characterization flow]()
      
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
@@ -432,10 +435,33 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 In OpenLANE flow Power distribution network generation is not a part of the floorplan step. Floorplan does not generate PDN. It is created after post CTS. The steps are - floorplan, placement, CTS and then PDN.
 
+### Cell design and characterization flows
 
+#### Cell Design Flow 
 
+Standard cell design flow involves the following:
 
+- **Inputs**: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications.
+- **Design steps**: Circuit design, Layout design (Art of layout - Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power).
+- **Outputs**: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
 
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/34a7afb2-8e67-45de-9665-ccbcc5209073)
+
+#### Typical characterization flow
+
+A typical standard cell characterization flow includes the following steps:
+
+1. Read in the models(model file) and tech files needed for layout
+2. Read the extracted spice netlist
+3. Define/Recognize the behaviour of the cell
+4. Read the subcircuits
+5. Attach power sources
+6. Apply stimulus to characterization setup
+7. Provide necessary output capacitance loads
+8. Provide necessary simulation commands
+9. Feed in all these inputs from step 1 to 8 in form of a configuration file to the characterization software called as GUNA which will generate Timing, Noise and Power models as output
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/966b0231-8189-46b4-9fe9-5a427a2ad975)
 
 
 

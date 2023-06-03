@@ -20,7 +20,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
 2. [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
    - [Chip Floor planning considerations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#chip-floor-planning-considerations)
      - [Utilization factor and aspect ratio](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#utilization-factor-and-aspect-ratio)
-     - [Concept of pre-placed cells]()
+     - [Concept of pre-placed cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#concept-of-pre-placed-cells)
      - [De-coupling capacitors]()
      - [Power planning]()
      - [Pin placement and logical cell placement blockage]()

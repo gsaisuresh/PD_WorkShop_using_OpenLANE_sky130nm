@@ -22,7 +22,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Utilization factor and aspect ratio](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#utilization-factor-and-aspect-ratio)
      - [Concept of pre-placed cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#concept-of-pre-placed-cells)
      - [De-coupling capacitors](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#de-coupling-capacitors)
-     - [Power planning]()
+     - [Power planning](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#power-planning)
      - [Pin placement and logical cell placement blockage]()
 
 

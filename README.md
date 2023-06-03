@@ -35,6 +35,9 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Cell design and characterization flows](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#cell-design-and-characterization-flows)
         - [Cell Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#cell-design-flow) 
         - [Typical characterization flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#typical-characterization-flow)
+       - [General timing characterization parameters]()
+         - [Timing threshold definitions]()
+         - [Propagation delay and transition time]() 
      
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
@@ -463,6 +466,19 @@ A typical standard cell characterization flow includes the following steps:
 
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/966b0231-8189-46b4-9fe9-5a427a2ad975)
 
+### General timing characterization parameters
 
+#### Timing threshold definitions
+
+Timing Threshold defintion | Value
+------------ | -------------
+slew_low_rise_thr  | 20% value
+slew_high_rise_thr |  80% value
+slew_low_fall_thr | 20% value
+slew_high_fall_thr | 80% value
+in_rise_thr | 50% value
+in_fall_thr | 50% value
+out_rise_thr | 50% value
+out_fall_thr | 50% value
 
 

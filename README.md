@@ -17,6 +17,15 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep-run-synthesis)
      - [Steps to characterize synthesis results](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#steps-to-characterize-synthesis-results)
 
+2. [Day 2 - Good floorplan vs bad floorplan and introduction to library cells]
+   - [Chip Floor planning considerations](#how-to-talk-to-computers)
+     - [Utilization factor and aspect ratio]()
+     - [Concept of pre-placed cells]()
+     - [De-coupling capacitors]()
+     - [Power planning]()
+     - [Pin placement and logical cell placement blockage]()
+
+
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
 ### How to Talk to computers
@@ -261,6 +270,42 @@ The synthesis statistics report can be accessed within the reports directory. Th
 
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1f7bdfd3-057c-4d61-bed6-5528a138a7e8)
 
+## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
+
+### Chip Floor planning considerations
+
+#### Utilization factor and aspect ratio
+
+In the physical design flow the first step was to define height and width of core and die which we do in Floor Planning stage. Floor Planning is the process of determing the macro placement, power grid generation and I/O placement. Floor Planning involves Defining the size of chip or block, preplacing macros, IO pads and defining power grid. Two parameters are of importance when it comes to floorplanning are Utilization Factor and Aspect Ratio. They are defines as follows :
+`Utilization factor : (area occupied by netlist) / (total area of core)`
+`Aspect Ratio` : (Height of core) / (Width of core)`
+
+A Utilisation Factor of 1 signifies 100% utilisation leaving no place for routing and extra logic. However, In real scenario, the Utilisation Factor will usually be 0.5-0.6 ie., 50 to 60% of the area is used for macros, standard cells and rest is used for routing, extralogic. Likewise, an Aspect ratio of 1 signifies that the chip is square shaped. Any value other than 1 signifies rectanglular chip.
+
+#### Concept of pre-placed cells
+
+Once the Utilisation Factor and Aspect Ratio has been decided, the locations of pre-placed cells need to be defined. Pre-placed cells are IPs which are a piece of complex logic that is reused in design such as Memory, Clock Gating Cell, Comparator, Mux etc. These IP's/Blocks have user defined locations, and hence are placed in chip before automated placement and routing and are called as pre-placed cells. So these cells are placed in such a fashion that the automated PnR tool will not touch the locations of these particular cells. Once their locations are fixed on a floorplan they are fixed and not moved by PnR tool.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/cc06e755-7a8f-44a9-bf14-6b91099f548c)
+
+#### De-coupling capacitors
+
+De-coupling capacitors are huge capacitors which are completely filled with charge, equivalent voltage acorss decoupling capaciotr is similar to that of voltage across power supply. Pre-placed cells must then be surrounded with decoupling capacitors (decaps). The resistances and capacitances associated with long wire lengths can cause the power supply voltage to drop significantly before reaching the logic circuits. This can lead to the signal value entering into the undefined region, outside the noise margin range. Decaps are huge capacitors charged to power supply voltage and placed close the logic circuit. So role of decoupling capacitor is to decouple the logic circuit from power supply, and whenever switching activity happens decoupling capacitor will send current to logic circuit. In this way decoupling capacitors avoid noise and crosstalk issues and enable the local communication.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c0d7d6ad-43dc-444a-963e-52c9a22d88db)
+
+####  Power planning
+
+If we have a single power supply driving all the cells in circuit this can lead to ground bounce and voltage droop issues, and we cannot have decoupling capacitors for each and every block in circuit since it demands more area and area requirements of chip may fail. So, separate horizontal and vertical Vdd and Vss wires have been created forming like a mesh or grid. This creation of a power mesh or power grid like structure is known as power planning.  Now, each cell can tap the required supply from the nearest power net. In this way by creation of an effective power mesh which consists of rails, stripes and power rings the power requirements of all standard cells, macros and other blocks are fulfilled. Power planning is also called as pre-routes because in chip power nets are routed first.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/ae697305-019f-4bf6-8844-09d4e2931f02)
+
+#### Pin placement and logical cell placement blockage
+
+The connectivity information between the gates is coded using VHDL/Verilog language and is called as netlist. Netlist basically refers to the connectivity of different gates.  The place between the core and die is utilised for placing IO pins. The connectivity information coded in either VHDL or Verilog is used to determine the position of I/O pads of various pins. Then, cell placement blockage is performed so as to differentiate that area from that of the pin area. 
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2adb902d-7e68-4021-9f55-a2729888c5a2)
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c38c4240-9251-417e-9a46-584221f5b177)
 
 
 

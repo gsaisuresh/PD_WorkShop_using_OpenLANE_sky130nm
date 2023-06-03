@@ -37,7 +37,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
         - [Typical characterization flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#typical-characterization-flow)
       - [General timing characterization parameters](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#general-timing-characterization-parameters)
         - [Timing threshold definitions](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-threshold-definitions)
-        - [Propagation delay and transition time]() 
+        - [Propagation delay and transition time](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#propagation-delay-and-transition-time) 
      
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK

@@ -323,7 +323,82 @@ Floorplan envrionment variables or switches:
 - `FP_CORE_VMETAL` - vertical metal layer
 - `FP_CORE_HMETAL` - horizontal metal layer
 
+Note: Usually, vertical metal layer and horizontal metal layer values will be 1 more than that specified in the files
+
+#### Review floorplan files and steps to view floorplan
+
 OpenLANE Priority order of files:
+
+1. ```sky130A_sky130_fd_sc_hd_config.tcl```
+2. ```conifg.tcl```
+3. ```floorplan.tcl``` - System default envrionment variables
+
+floorplan.tcl file is as follows : 
+
+![3  floorplan tcl](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/307159f0-bb93-4330-bc7e-651e1d58dd4d)
+
+config.tcl file is as follows:
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/26215fe8-ac82-4673-b24c-c723a553a885)
+
+sky130A_sky130_fd_sc_hd_config.tcl file is as follows:
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/fba4ab87-c199-449a-81a0-cae98bec23c4)
+
+To run the picorv32a floorplan in openLANE the command is : `run_floorplan`. 
+
+![6  run floorplan](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e6cf6009-64c2-41a8-bdba-96f0a79c1e77)
+
+Post the floorplan run, a .def file will have been created within the results/floorplan directory. We may review floorplan files by checking the floorplan.tcl. The system defaults will have been overriden by switches set in conifg.tcl and further overriden by switches set in sky130A_sky130_fd_sc_hd_config.tcl
+
+After Succesfull Floorplan The directory with current date is created 
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/67f24a01-b1b5-4e92-b804-1b66001b804a)
+
+The created floorplan def is as follows from this we can calculate the die area as well 
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f41475bd-b74e-4c68-9f84-5abe931d1793)
+
+#### Review floorplan layout in Magic
+
+To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
+
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8b778914-1ce1-4552-9861-d287bdf605f7)
+
+The magic opens the floorplan which is as follows :
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/69626e70-f8c2-4227-a225-dc70e67dcf20)
+
+One can zoom into Magic layout by selecting an area with left and right mouse click followed by pressing "z" key
+
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8f6103fa-7328-4d03-a0f6-8e5d3ea257d1)
+
+Component of selection can be quiered and identified using the what command in tkcon window, we can see details such as on which metal layer it is laying on.
+
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/770a18f5-98cc-4265-b48a-f8ae4cff5fee)
+![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/97c9e78f-fea0-44a8-9468-69a2b13d874c)
+
+We can view the decap and tap cells by further zooming the layout.
+
+![9](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/0d151b71-d3c1-4864-9c5a-7a9d9cc88ea8)
+![10](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/fca8170c-a484-4462-8bda-33badbcede1f)
+
+We can find the details of standard cells at the bottom left most corner of layout, by selecting the component and clicking on S button we can see which component it is.
+
+![11](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/176522ff-2eea-4e69-b3e4-a43e2a55e54b)
+![12](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/61279a46-dc92-4b1a-a620-2c542a1b0aa2)
+![12 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5923eb0b-00ae-41c2-ab7d-d22c43139e62)
+
+
+
+
+
+
+
+
 
 
 

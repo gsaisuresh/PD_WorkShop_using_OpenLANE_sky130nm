@@ -19,7 +19,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
 
 2. [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
    - [Chip Floor planning considerations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#chip-floor-planning-considerations)
-     - [Utilization factor and aspect ratio]()
+     - [Utilization factor and aspect ratio](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#utilization-factor-and-aspect-ratio)
      - [Concept of pre-placed cells]()
      - [De-coupling capacitors]()
      - [Power planning]()
@@ -277,8 +277,9 @@ The synthesis statistics report can be accessed within the reports directory. Th
 #### Utilization factor and aspect ratio
 
 In the physical design flow the first step was to define height and width of core and die which we do in Floor Planning stage. Floor Planning is the process of determing the macro placement, power grid generation and I/O placement. Floor Planning involves Defining the size of chip or block, preplacing macros, IO pads and defining power grid. Two parameters are of importance when it comes to floorplanning are Utilization Factor and Aspect Ratio. They are defines as follows :
-`Utilization factor : (area occupied by netlist) / (total area of core)`
-`Aspect Ratio` : (Height of core) / (Width of core)`
+
+- `Utilization factor : (area occupied by netlist) / (total area of core)`
+- `Aspect Ratio : (Height of core) / (Width of core)`
 
 A Utilisation Factor of 1 signifies 100% utilisation leaving no place for routing and extra logic. However, In real scenario, the Utilisation Factor will usually be 0.5-0.6 ie., 50 to 60% of the area is used for macros, standard cells and rest is used for routing, extralogic. Likewise, an Aspect ratio of 1 signifies that the chip is square shaped. Any value other than 1 signifies rectanglular chip.
 

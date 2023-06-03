@@ -30,7 +30,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Review floorplan layout in Magic](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-layout-in-magic)
      - [Library Binding and Placement](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#library-binding-and-placement)
        - [Netlist binding and initial place design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#netlist-binding-and-initial-place-design)
-       - [Optimize placement using estimated wire-length and capacitance]()
+       - [Optimize placement using estimated wire-length and capacitance](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#optimize-placement-using-estimated-wire-length-and-capacitance)
        - [Day-2 Lab : Placement - Congestion aware placement using RePlAce]()
      
 

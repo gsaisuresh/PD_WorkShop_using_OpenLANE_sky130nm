@@ -35,7 +35,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Cell design and characterization flows](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#cell-design-and-characterization-flows)
         - [Cell Design Flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#cell-design-flow) 
         - [Typical characterization flow](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#typical-characterization-flow)
-       - [General timing characterization parameters]()
+       - [General timing characterization parameters](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#general-timing-characterization-parameters)
          - [Timing threshold definitions]()
          - [Propagation delay and transition time]() 
      

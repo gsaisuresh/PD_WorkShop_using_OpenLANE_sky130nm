@@ -28,6 +28,11 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Steps to run floorplan using OpenLANE](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#steps-to-run-floorplan-using-openlane)
       - [Review floorplan files and steps to view floorplan](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-files-and-steps-to-view-floorplan)
       - [Review floorplan layout in Magic](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-layout-in-magic)
+     - [Library Binding and Placement]()
+       - [Netlist binding and initial place design]()
+       - [Optimize placement using estimated wire-length and capacitance]()
+       - [Congestion aware placement using RePlAce]()
+     
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
@@ -392,15 +397,40 @@ We can find the details of standard cells at the bottom left most corner of layo
 ![12](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/61279a46-dc92-4b1a-a620-2c542a1b0aa2)
 ![12 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5923eb0b-00ae-41c2-ab7d-d22c43139e62)
 
+### Library Binding and Placement
 
+#### Netlist binding and initial place design
 
+Library consists of cells with different shapes, sizes, physical information such as width and height of cells, delay information of cells. We need to Bind the netlist with the physical cells i.e., library cells. The timing information of cells is available in .lib files and physical information of cells is available in .lef files. The next step is placement. Once we initial the design, the logic cells in netlist in its physical dimisoins is placed on the floorplan. Next we go for initial placement.
 
+#### Optimize placement using estimated wire-length and capacitance
 
+This is the stage where we estimate wire length and capacitance and based on that insert repeaters. Repeaters are basically buffers that will recondition our original signal, make a new signal which replicates the original signal and send it again. In this way the signal integrity is maintained. 
 
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/58056f0c-5660-4eb0-b853-f6cf45006550)
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/da7d0507-916e-496f-8de4-7329b00e206d)
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/038fac54-17b5-4f45-9e27-1fa1578dddf7)
 
+#### Congestion aware placement using RePlAce
 
+The command to run placement in openLANE flow is `run_placement`
 
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7f5c408a-7001-4c3b-a226-6dd36ae92a2a)
 
+The objective of placement is the convergence of overflow value. If overflow value progressively reduces during the placement run it implies that the design will converge and placement will be successful.
+Post placement, the design can be viewed on magic within results/placement directory:
+
+To view the placement, Magic is invoked after moving to the results/placements directory:
+
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/0d4fdc46-f9fe-41cb-990b-ec63ddce02ca)
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/9b4a5b40-f2c2-4ca7-bb39-afe10b2cbb12)
+![4 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/84d2d47a-37f0-4509-8acc-92e686b5184f)
+
+In OpenLANE flow Power distribution network generation is not a part of the floorplan step. Floorplan does not generate PDN. It is created after post CTS. The steps are - floorplan, placement, CTS and then PDN.
 
 
 

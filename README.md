@@ -29,9 +29,9 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
       - [Review floorplan files and steps to view floorplan](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-files-and-steps-to-view-floorplan)
       - [Review floorplan layout in Magic](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-floorplan-layout-in-magic)
      - [Library Binding and Placement](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#library-binding-and-placement)
-       - [Netlist binding and initial place design]()
+       - [Netlist binding and initial place design](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#netlist-binding-and-initial-place-design)
        - [Optimize placement using estimated wire-length and capacitance]()
-       - [Congestion aware placement using RePlAce]()
+       - [Day-2 Lab : Placement - Congestion aware placement using RePlAce]()
      
 
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK

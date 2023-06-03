@@ -17,7 +17,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Review files after design prep and run synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#review-files-after-design-prep-run-synthesis)
      - [Steps to characterize synthesis results](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#steps-to-characterize-synthesis-results)
 
-2. [Day 2 - Good floorplan vs bad floorplan and introduction to library cells]
+2. [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
    - [Chip Floor planning considerations](#how-to-talk-to-computers)
      - [Utilization factor and aspect ratio]()
      - [Concept of pre-placed cells]()

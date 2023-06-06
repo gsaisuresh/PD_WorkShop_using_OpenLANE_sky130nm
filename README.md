@@ -1048,6 +1048,39 @@ If we want to continune from previous results we dont want to use -overwrite opt
 
 ![1 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/46cc5aa2-5b4f-4497-9aa4-c207140a9b49)
 
+Now lets run gen_pdn
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/9765e9ab-3cdb-4ef7-be7f-ecb27fd1f0cf)
+![2 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/dd0958ea-6914-4800-92c2-38583e423506)
+
+Now check `CURRENT_DEF` is updated to pdn.def 
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/55a775ba-dbec-42f6-9d6d-524ac00d1f5d)
+
+#### Routing Stage and TritonRoute:
+OpenLane routing stage consists of two stages:
+
+- **Global Routing** - Form routing guides that can route all the nets. The tool used is FastRoute
+- **Detailed Routing** - Uses the global routing's guide to actually connect the pins with least amount of wire and bends. The tool used is TritonRoute.
+
+#### Routing Lab
+
+We will now finally do the routing, simply run `run_routing`. This will do both global and detailed routing, this will take multiple optimization iterations until the DRC violation is reduced to zero.
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/48791551-1881-4f38-ac8a-4bb29dc68a0d)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/25f4ac6d-9c9f-4b36-9f28-1afd4019f1db)
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1e5f526b-e245-4a6e-b6c6-a594808a0844)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1ee5be31-6ee4-4ba5-beb2-d53cd8efe6af)
+
+A DEF file will be formed `results/routing/picorv32a.def` Open the DEF file output of routing stage in Magic
+
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2d858aed-5ad2-488a-a67b-e6f9f1e3d1ea)
+![8 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/4b4c6491-037d-4f03-a5f9-263337e81906)
+![9 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7e80df53-bd3d-4e9b-b024-2199bc10e0f5)
+
+Extract SPEF file and perform post-routing STA and Finally, run: `run_magic`. This will create the GDS file under: runs/[date]/results/routing/picorv32.gds
+
+
 
 
 

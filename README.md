@@ -582,7 +582,30 @@ The 16-mask CMOS process consists of the following steps:
 7. Steps to form contacts and interconnects(local) : Etch thin oxide in HF solution, deposit titanium on wafer surface using sputtering then heat the wafer at about 650-700 degrees in N2 ambient for 60 sec. This step uses mask-11.
 8. Higher level metal formation : CMP for planarization followed by TiN and Tungsten deposition. Top SiN layer for chip protection. This step uses masks 12,13,14,15 and 16.
 
+#### Day-3 Lab Part-2 : Lab introduction to Sky130 basic layers layout and LEF using inverter
 
+In part-1 we cloned mag file of vsdstdcelldesign in openlane directory and are able to open the CMOS Inverter in magic, In this part we will understand layout in detail. When a poly crosses an n-diffusion region its an NMOS, when a poly crosses p-diffusion its a PMOS, Now let us confirm this by doing a query in layout. To query area of interest put curser over that area and click S then that area gets selected, Now we can query a `what` command in tkcon window to get details of it. 
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b4e1ee06-acff-4139-9d2c-6041381c1f9b)
+
+Now we can observe in the above pic the what command gave the details of selected region as NMOS so our defination When a poly crosses an n-diffusion region its an NMOS holds true. Now lets check the same with pmos :
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/94f8841b-7718-457c-9f86-07f1249d6bda)
+
+If we press S thrice the entire thing to which the highlighted area is connected to gets selected.
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/ab2398a9-53e7-41b4-bab5-37e35bb7e2c1)
+
+We can observe in the above pic the Y which is output is connected to both the drains of pmos and nmos.
+Similarly we can do the same and observe whether source of PMOS is connected to Vdd and source of NMOS is connected to Gnd or not.
+
+![5 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7a737e37-ea20-40df-8961-b6e07512725d)
+![6 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5bc5c3f7-e14a-4293-86c1-945badeac179)
+
+
+
+
+ 
 
 
 

@@ -914,7 +914,14 @@ After the run we got a slack violation
 We can observe the nets has huge fanouts of 161 and 39 with huge slew. I tried out with various ways to reduce the slack but it did not reduce and I proceeded for CTS, post CTS I didnot get any violation.
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8c1f88de-ccb4-49d1-9e10-e83561157a2a)
 
+### Clock tree synthesis TritonCTS and signal integrity
 
+#### Clock tree routing and buffering using H-Tree algorithm
+
+In this stage clock is propagated and make sure that clock reaches each and every clock pin from clock source with mininimum skew and insertion delay. Inorder to do this, we implement H-tree using mid point strategy. For balancing the skews, we use clock invteres or bufferes in the clock path.
+- **clock skew** : Difference in the arrival times of clock signal at the clock pins of different flip flops.
+- **cross talk** : Cross talk is a phenomenon in which signal transmitted on one net cause an undesired effect on other net, cross talk can occur due to capacitive coupling, inductive coupling and conductive coupling.
+- **Clock Shielding** : Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim net and aggresor nets, the shield might be connected to VDD or ground since those will not switch. Shileding can also be done on critical data nets.
 
 
 

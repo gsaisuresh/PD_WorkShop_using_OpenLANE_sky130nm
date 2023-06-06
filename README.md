@@ -69,7 +69,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
      - [Clock tree routing and buffering using H-Tree algorithm](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-routing-and-buffering-using-h-tree-algorithm)
      - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-3--lab-steps-to-run-cts-using-tritoncts)
-   - [Timing analysis with real clocks using openSTA]()
+   - [Timing analysis with real clocks using openSTA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-analysis-with-real-clocks-using-opensta)
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()

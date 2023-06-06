@@ -43,7 +43,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Labs for CMOS inverter ngspice simulations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#labs-for-cmos-inverter-ngspice-simulations)
      - [IO placer revision](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#io-placer-revision)
      - [SPICE deck creation for CMOS inverter]()
-     - [SPICE simulation lab for CMOS inverter]()
+     - [SPICE deck Netlsit Description]()
      - [Switching Threshold Vm]()
      - [Static and dynamic simulation of CMOS inverter]()
      - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign]()
@@ -525,5 +525,19 @@ Features of OpenLANE allows to make changes on the fly. PnR is an iterative flow
 
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e28f402c-5980-4a83-9cf1-7ad29e0552d4)
 
+#### SPICE deck creation for CMOS inverter
+
+Before entering into the spice simulations the first part is to create spice deck. Spice deck is nothing but a connectivity information about the netlist, it has got the connectivity information, it has got the inputs that are to be provided to the simulation, it has got the tap points at which we take the output. Spice deck provides the information about following :
+- **Component Connectivity** : Connectivity information of the Vdd, Vss,Vin, substrate. Substrate is a potential component or a potential pin on NMOS,PMOS So we need to define the connnectivity of substrate pin as well.
+- **Connectivity Values** : we need to define the values(W/L) of PMOS and NMOS,output load, input gate voltage, supply voltage
+- **Identify the nodes and name the nodes** 
+
+#### SPICE deck Netlsit Description
+
+The format to see Mosfet description is `MosfetName[M1] drain[out] gate[in] source[vdd] substrate[vdd] type[pmos] W[0.375u] L[0.25u]`
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/897ad1b0-b37b-4e5e-b935-cc86acb6a8c6)
+
+Complete description of NMOS and PMOS transistors are available in model file, all the technological parameters and all the parameters related to 250nm Technology node are all available in model file.
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/02725c00-a073-407f-8c41-434d5adb4cbd)
 
 

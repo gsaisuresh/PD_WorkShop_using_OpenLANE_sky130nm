@@ -860,6 +860,24 @@ Since the custom standard cell has been plugged into the design,in the openlane 
 ![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/36aaf164-9da5-4824-b23b-90b188c219ad)
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/9be1e564-2cdf-4873-bda0-206393afda6c)
 
+### Timing analysis with ideal clocks using openSTA
+
+#### Setup timing analysis and introduction to flip-flop setup time
+
+Pre-layout STA will not yet include effects of clock buffers and net-delay due to RC parasitics
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/672e7c6d-3ac6-4c7b-84ad-edeb2b0a94d3)
+
+Setup timing analysis equation is:
+
+'''
+Θ < T - S
+'''
+
+where 
+- Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop
+- T = Time period
+-  S = Setup time
 
 
 

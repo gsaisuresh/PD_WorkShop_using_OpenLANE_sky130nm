@@ -540,4 +540,15 @@ The format to see Mosfet description is `MosfetName[M1] drain[out] gate[in] sour
 Complete description of NMOS and PMOS transistors are available in model file, all the technological parameters and all the parameters related to 250nm Technology node are all available in model file.
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/02725c00-a073-407f-8c41-434d5adb4cbd)
 
+#### Switching Threshold Vm
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3c28abe5-de76-4be3-a02a-2e53730f4c55)
+
+If we see irrespective of sizes of PMOS the shape of CMOS inverter simulation remains same, this tells us CMOS inverter is a very robust device. One of the parameters that define the robustness of CMOS is switching threshold (Vm). Switching Threshold means the point at which the device switches. Switching Threshold is a point at which Vin=Vout. At this point both pmos and nmos are in saturation, means both are turned on and have high chances of current flowing driectly from VDD to Ground called Leakage current.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1d5f4502-6f0f-4cb7-bcb6-1e45af8c50b4)
+
+
+
+
 

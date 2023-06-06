@@ -39,7 +39,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
         - [Timing threshold definitions](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-threshold-definitions)
         - [Propagation delay and transition time](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#propagation-delay-and-transition-time) 
      
-3. [Day 3 - Design library cell using Magic Layout and ngspice characterization]()
+3. [Day 3 - Design library cell using Magic Layout and ngspice characterization](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
    - [Chip Floor planning considerations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#chip-floor-planning-considerations)
      - [IO placer revision]()
      - [SPICE deck creation for CMOS inverter]()

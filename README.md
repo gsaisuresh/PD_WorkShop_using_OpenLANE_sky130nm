@@ -45,7 +45,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [SPICE deck creation for CMOS inverter](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-creation-for-cmos-inverter)
      - [SPICE deck Netlsit Description](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-netlsit-description)
      - [Switching Threshold Vm](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#switching-threshold-vm)
-     - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign]()
+     - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3-lab-part-1--lab-steps-to-git-clone-vsdstdcelldesign)
    - [Inception of Layout and CMOS fabrication process]()
       - [16-mask CMOS Process]()
       - [Day-3 Lab Part-2 : Lab introduction to Sky130 basic layers layout and LEF using inverter]()

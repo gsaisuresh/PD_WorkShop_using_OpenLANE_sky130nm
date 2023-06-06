@@ -619,15 +619,58 @@ Next we will use this .ext file to create the spice file which is to be used by 
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/caf75238-dc81-4b76-b2d6-05cd00bf295e)
 ![4 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/19b9864c-1e1b-4b87-84ae-b377f03051c9)
 
+### Day-3 Lab Part-3 : Sky130 Tech File Labs
 
+#### Lab steps to create final SPICE deck using Sky130 tech
 
+The extracted spice file looks as follows. 
 
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/32364ee9-8d2d-40ec-86bd-a6e415018ddd)
 
+The grid which is minimum value of layout is obtained as follows :
 
+![Screenshot 2023-06-05 114727](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/dfc9948d-8701-4cee-87fc-f60318a1140c)
 
+Now we will edit the scale of spice file to 0.01um which is minimum value of layout and do necessary changes to extracted spice file for analysis of our inverter design such as including pmos and nmos (pshort.lib,nshort.lib) which are available in .libs folder,Model names are changed to nshort_model.0 and pshort_model.0 according to the libs of nmos and pmos. Providing Suppply voltage and Ground voltage as
+3.33V and 0V, analysis type as transient analysis and Input A as pulse input. the modified spice file is as follows :
 
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/60ce494e-cc45-4efe-9872-a107e7f8c0e8)
 
- 
+#### Lab steps to characterize inverter using sky130 model files
+
+Spice Deck is done and now to run spice simulation invoke ngspice in the tool and pass the source file `ngspice sky130_inv.spice`
+
+![2 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3c451840-4429-4bec-938f-5767c4914ed0)
+![2 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7fe459d1-d85c-4001-bec9-1a1735edbad5)
+
+To see the plot, type  `plot y vs time a` in prompt window.
+![2 3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/856adf8a-df2a-4ae4-b329-9cd17029c7ef)
+
+Now we can observe the spikes are more so we will make sure load capacitance value is some what higher value and update it to 2fF.
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/11e6dbac-9553-4ec6-bf4a-9078cfefa542)
+
+The waveform after updating load capacitance is as follows :
+![3 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7fdc537f-2f9a-4dbf-88bb-e003925373bc)
+
+Now lets perform cell characterization i.e finding the value of 4 parameters namely
+- **rise transition** : time taken for a output waveform to transit from a value of 20% of max value to 80% of max value
+- **fall transition** : time taken for a output waveform to fall from a value of 80% of max value to 20% of max value
+- **cell fall delay** : time difference when output has fallen to its 50% and input has risen to 50%
+- **cell rise delay** : time difference when input has fallen to its 50% and output has risen to 50%
+
+rise transition : 59.6ps is as follows :
+![3 4 rise transition](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f48d28a2-6f15-4854-82c1-6e1935f9bebe)
+
+cell rise delay : 57.26ps is as follows :
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/557d43e8-8b73-471a-94ce-d2238b089882)
+![4 1 cell rise delay or pd](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6d3a82ff-fcf7-49ac-8242-c8940c25d9e6)
+
+cell fall delay : 25.4ps is as follows :
+![5  cell fall delay](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3bad05bb-19ae-4841-94e5-2ed096274b48)
+![5 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/82e08b91-0aad-4cdc-a154-43f65f45454b)
+
+Siilarly we get Fall Transition : 39.37ps
+
 
 
 

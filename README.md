@@ -673,6 +673,53 @@ cell fall delay : 25.4ps is as follows :
 
 Siilarly we get Fall Transition : 39.37ps
 
+#### Magic DRC Lab
+
+Before starting the lab, let's get an idea of how Magic performs DRC's and Syntax for DRC rules available in `http://opencircuitdesign.com/magic` website. By Google/ Skywater, we have the opportunity to use the fabication process technology now made as an open source. skywater sky130 pdk URL : `https://skywater-pdk.readthedocs.io/en/main/`
+
+We can understand more information about magic and skywater in these websites :
+github.com - `https://github.com/google/skywater-pdk` 
+Documentation -  `https://skywater-pdk--136.org.readthedox.build`
+Magic Tutorial - `http://opencircuitdesign.com/magic/userguide.html`
+
+We can download the packaged files from web using wget  command. wget stands for web get 
+`wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz`
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/22a92bce-6588-47de-ac46-895e38232ea7)
+
+The archived file drc_tests.tgz is downloaded into the home directory, Now we have to unzip the file using command `tar -xfz drc_tests.tgz`.
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2a0491f4-2849-4fa2-be40-aaef5c1f37db)
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1f2c13e7-f220-47ce-9e79-a469dca489d4)
+
+Now we will open magic using command `magic -d XR `
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/48b49b8e-61c8-4273-bde7-3eea1336a368)
+
+Now, lets see an example of simple failing set of rules of metal 3 layer. 
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b04cdb74-f009-4067-9299-98b0c05440be)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/9331964b-1ab1-4389-85c8-02438d5dcdfe)
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/86e1a069-c6cf-4ef1-8f16-c676a0ffab8f)
+
+Open magic with poly.mag as input: magic poly.mag. Focus on Incorrect poly.9 layout. 
+![8 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/bfbebe55-1ae7-4354-ba05-71b30941905a)
+
+Open sky130A.tech. The included rules for poly.9 are only for the spacing between the n-poly resistor with n-diffusion and the spacing between the p-poly resistor with diffusion. We will now add new rules for the spacing between the poly resistor with poly non-resistor.
+
+![9 3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/68578973-a926-40f9-8549-a6071c6d0702)
+
+Once the tech file has been modified for drc, we load the tech file in tkcon window and tool doesnot check drc automatically so we need to check drc too. Once loaded, the violations are reduced since spacing rule is met
+
+![9 6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/606689c4-5ed3-462c-aacc-c3374d57c981)
+
+
+
+
+
+
+
+
+
 
 
 

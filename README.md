@@ -647,9 +647,11 @@ To see the plot, type  `plot y vs time a` in prompt window.
 ![2 3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/856adf8a-df2a-4ae4-b329-9cd17029c7ef)
 
 Now we can observe the spikes are more so we will make sure load capacitance value is some what higher value and update it to 2fF.
+
 ![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/11e6dbac-9553-4ec6-bf4a-9078cfefa542)
 
 The waveform after updating load capacitance is as follows :
+
 ![3 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7fdc537f-2f9a-4dbf-88bb-e003925373bc)
 
 Now lets perform cell characterization i.e finding the value of 4 parameters namely

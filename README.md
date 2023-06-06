@@ -974,9 +974,34 @@ Now We look at setup and hold slack values
 
 After performing Timing analysis, my slack values are Setup Slack : 6.745 Slack is MET, Hold Slack : 1.645 slack is MET
 
+#### Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries
 
+We had bulit clock tree for Typical corner and we are analysing for min and max corners so we need to include only typical corner for analysis. Now follow these steps :
 
+```
+exit
+openroad
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/02-06_09-18/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+link_design picorv32a
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock (all_clocks)
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
 
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/21d698ba-5a69-4154-aa2d-168b90f9dcaf)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/18b4cc09-793e-4ece-b69f-d0753a838361)
+![3 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/17e8045f-66ac-4cd4-824b-111643d75f07)
+![3 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e666d7d4-6866-4946-a72c-23b046ab6a7b)
+
+After performing Timing analysis, my slack values are Setup Slack : 3.8770 Slack is MET, Hold Slack : -0.0627 slack is VIOLATED
+
+Now lets check for skew values which should be less than 10% max lok period.
+
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f575ae12-3ad3-4547-aa69-c08c3b0ccef9)
+
+We can see skew values are within bound.
 
 
 

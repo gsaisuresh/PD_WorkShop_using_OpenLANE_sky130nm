@@ -74,7 +74,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-execute-opensta-with-right-timing-libraries)
      - [Day-4 Lab Part-4 : Lab steps to observe impact of bigger CTS buffer on setup and hold timing](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-observe-impact-of-bigger-cts-buffer-on-setup-and-hold-timing)
      
- 5. [Day-05 : PDN and Routing]()
+ 5. [Day-05 : PDN and Routing](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-05--pdn-and-routing)
       
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 

@@ -53,7 +53,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Day-3 Lab Part-3 : Sky130 Tech File Labs](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3-lab-part-3--sky130-tech-file-labs)
        - [Lab steps to create final SPICE deck using Sky130 tech](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#lab-steps-to-create-final-spice-deck-using-sky130-tech)
        - [Lab steps to characterize inverter using sky130 model files](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#lab-steps-to-characterize-inverter-using-sky130-model-files)
-       - [Magic DRC Lab]()
+       - [Magic DRC Lab](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#magic-drc-lab)
      
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 

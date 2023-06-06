@@ -72,7 +72,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Timing analysis with real clocks using openSTA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-analysis-with-real-clocks-using-opensta)
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-execute-opensta-with-right-timing-libraries)
-     - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()
+     - [Day-4 Lab Part-4 : Lab steps to observe impact of bigger CTS buffer on setup and hold timing]()
      
  5. [Day-05 : Routing]()
       
@@ -976,7 +976,7 @@ After performing Timing analysis, my slack values are Setup Slack : 6.745 Slack 
 
 #### Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries
 
-We had bulit clock tree for Typical corner and we are analysing for min and max corners so we need to include only typical corner for analysis. Now follow these steps :
+We had bulit clock tree for Typical corner and we are analysing for min and max corners so we need to include only typical library corner for analysis. Now follow these steps :
 
 ```
 exit
@@ -1002,6 +1002,46 @@ Now lets check for skew values which should be less than 10% max clock period.
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f575ae12-3ad3-4547-aa69-c08c3b0ccef9)
 
 We can see skew values are within bound.
+
+#### Day-4 Lab Part-4 : Lab steps to observe impact of bigger CTS buffer on setup and hold timing
+
+When TritonCTS is building the branch clock tree, it tries each buffers from smallest to largest until the target skew is met. 
+So Now lets observe the impact of bigger CTS buffer on setup and hold timing.
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/edb29d76-3b4c-4a64-ad9c-cae21b947e04)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/367649a4-7bc2-48c6-be3b-a1e21ac48b0c)
+
+Now we can observe that clkbuf_1 is removed from the list, Now lets run_cts
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3825c224-e749-4b47-9afd-c51e3e960a23)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e553080e-0c62-4156-8727-be332e1888f2)
+
+Now let us run the openroad commands once again now we write a new db file.
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/48af0bb0-aba6-4321-896b-3af186d5c833)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e61d8f78-8d66-4a4d-bd28-7fbcd44c41ee)
+
+Now let us look at setup and hold slacks
+
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/89f4563f-4f90-4973-93a6-0134d36d4445)
+![8 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/13de07b7-1767-4417-bb79-4e0a33d4a973)
+![8 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b5732d46-b283-4709-ad68-8866e591bdb6)
+
+After performing Timing analysis, my slack values are Setup Slack : 4.0348 Slack is MET, Hold Slack : 0.1794 slack is MET
+We can observe by removing clkbuf_1 from list our slack is MET.
+
+Skew values are also improving which are as follows :
+
+![9](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/261a8ba5-1081-48b2-beb7-5dda68a11d6c)
+
+We can get back clkbuf_1 into the buffer list by doing the following steps :
+
+![10](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3b7a9017-ef33-4643-998b-5e0ce5c61aab)
+
+
+
+
+
 
 
 

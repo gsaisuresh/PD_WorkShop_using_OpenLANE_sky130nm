@@ -567,6 +567,21 @@ Now mag file can be invoked in magic using the command  `magic -T sky130A.tech s
 ![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/22a204bb-73c6-4979-934e-f529e1d0313d)
 ![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6ad32c01-4c88-4994-b9e1-190931adf55f)
 
+### Inception of Layout and CMOS fabrication process
+
+#### 16-mask CMOS Process
+
+The 16-mask CMOS process consists of the following steps:
+
+1. Selecting a Substrate : Secting the body/substrate material. The substrate doping has to be less than well doping.
+2. Creating active region for Transistors : Isolation between active region pockets by SiO2 and Si3N4 deposition followed by photolithography and etching. This step uses mask-1.
+3. N-Well and P-Well formation : This step follows Ion implanation by Boron for P-well and by Phosphorous for N-well formation. This step uses mask-2 and mask-3.
+4. Formation of Gate : In this stage NMOS and PMOS gates are formed by photolithography techniques. This step uses masks 4,5, and 6.
+5. Lightly Doped Drain (LDD) Formation : LDD is formed to prevent short channel effect and hot electron effect. This step uses mask 7 and 8.
+6. Source and Drain Formation : Screen oxide added to avoid channelling during implants followed by Aresenic implantation and annealing. This step uses mask 9 and 10.
+7. Steps to form contacts and interconnects(local) : Etch thin oxide in HF solution, deposit titanium on wafer surface using sputtering then heat the wafer at about 650-700 degrees in N2 ambient for 60 sec. This step uses mask-11.
+8. Higher level metal formation : CMP for planarization followed by TiN and Tungsten deposition. Top SiN layer for chip protection. This step uses masks 12,13,14,15 and 16.
+
 
 
 

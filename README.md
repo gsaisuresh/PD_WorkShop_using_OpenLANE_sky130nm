@@ -54,7 +54,32 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
        - [Lab steps to create final SPICE deck using Sky130 tech](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#lab-steps-to-create-final-spice-deck-using-sky130-tech)
        - [Lab steps to characterize inverter using sky130 model files](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#lab-steps-to-characterize-inverter-using-sky130-model-files)
        - [Magic DRC Lab](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#magic-drc-lab)
-     
+
+3. [Day 4 - Pre-layout timing analysis and importance of good clock tree]()
+   - [Timing modelling using delay tables]()
+     - [Day-4 Lab Part-1 : Lab steps to convert grid info to track info]()
+     - [Day-4 Lab Part-1 : Lab steps to convert magic layout to std cell LEF]()
+     - [Day-4 Lab Part-1 : Introduction to timing libs and steps to include new cell in synthesis]()
+     - [Introduction to delay tables]()
+     - [Day-4 Lab Part-1 : Lab steps to configure synthesis settings to fix slack and include vsdinv]()
+   - [Timing analysis with ideal clocks using openSTA]()
+     - [Setup timing analysis and introduction to flip-flop setup time]()
+     - [Introduction to clock jitter and uncertainty]() 
+     - [Day-4 Lab Part-2 : Lab steps to configure OpenSTA for post-synth timing analysis]()
+     - [Day-4 Lab Part-2 : Lab steps to optimize synthesis to reduce setup violations]()
+     - [Day-4 Lab Part-2 : Lab steps to do basic timing ECO]()
+   - [Clock tree synthesis TritonCTS and signal integrity]()
+     - [Clock tree routing and buffering using H-Tree algorithm]()
+     - [Crosstalk and clock net shielding]()
+     - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS]()
+     - [Day-4 Lab Part-3 : Lab steps to verify CTS runs]()
+   - [Timing analysis with real clocks using openSTA]()
+     - [Setup timing analysis using real clocks]()
+     - [Hold timing analysis using real clocks]()
+     - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA]()
+     - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries]()
+     - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()
+      
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
 ### How to Talk to computers

@@ -71,7 +71,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-3--lab-steps-to-run-cts-using-tritoncts)
    - [Timing analysis with real clocks using openSTA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-analysis-with-real-clocks-using-opensta)
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
-     - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries]()
+     - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-execute-opensta-with-right-timing-libraries)
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()
      
  5. [Day-05 : Routing]()
@@ -997,7 +997,7 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 After performing Timing analysis, my slack values are Setup Slack : 3.8770 Slack is MET, Hold Slack : -0.0627 slack is VIOLATED
 
-Now lets check for skew values which should be less than 10% max lok period.
+Now lets check for skew values which should be less than 10% max clock period.
 
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f575ae12-3ad3-4547-aa69-c08c3b0ccef9)
 

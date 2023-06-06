@@ -814,6 +814,12 @@ Now we perform `run_synthesis`
 ![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c4d65144-de09-4511-8039-336c61d670e6)
 ![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3b5edf79-115f-4cee-9f9b-0e1c1ea6e625)
 
+#### Introduction to delay tables
+
+Delay is a parameter that has huge impact on our cells in the design. Delay decides each and every other factor in timing. For a cell with different size, threshold voltages, delay model table is created where we call it as timing table. Delay of a cell depends on input transition and output load capacitance. Delay tables consists of the information related to cell rise, cell fall, fall transition, rise transition.
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e1970154-2bcf-4f6c-b47e-9d8d1b85565f)
+
 
 
 

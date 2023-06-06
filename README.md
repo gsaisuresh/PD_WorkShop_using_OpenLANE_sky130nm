@@ -49,7 +49,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Inception of Layout and CMOS fabrication process](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#inception-of-layout-and-cmos-fabrication-process)
       - [16-mask CMOS Process](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#16-mask-cmos-process)
       - [Day-3 Lab Part-2 : Lab introduction to Sky130 basic layers layout and LEF using inverter](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3-lab-part-2--lab-introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
-      - [Day-3 Lab Part-2 : Lab steps to create std cell layout and extract spice netlist]()
+      - [Day-3 Lab Part-2 : Lab steps to create std cell layout and extract spice netlist](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3-lab-part-2--lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
    - [Day-3 Lab Part-3 : Sky130 Tech File Labs]()
        - [Lab steps to create final SPICE deck using Sky130 tech]()
        - [Lab steps to characterize inverter using sky130 model files]()

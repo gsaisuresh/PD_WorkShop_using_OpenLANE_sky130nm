@@ -1082,9 +1082,10 @@ Finally Extract SPEF file and perform post-routing STA and Finally, run: `run_ma
 
 This completes our 5-Day Workshop
 
-Instructors 
-Kunal Gosh, VSD Corporation
-Nickson-Jose, VSD Corporation
+Acknowledgements :
+
+- Kunal Gosh, VSD Corporation
+- Nickson-Jose, VSD Corporation
 
 
 

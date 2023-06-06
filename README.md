@@ -43,7 +43,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Labs for CMOS inverter ngspice simulations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#labs-for-cmos-inverter-ngspice-simulations)
      - [IO placer revision](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#io-placer-revision)
      - [SPICE deck creation for CMOS inverter](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-creation-for-cmos-inverter)
-     - [SPICE deck Netlsit Description]()
+     - [SPICE deck Netlsit Description](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-netlsit-description)
      - [Switching Threshold Vm]()
      - [Static and dynamic simulation of CMOS inverter]()
      - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign]()

@@ -897,6 +897,25 @@ where
 - S = Setup time
 - SU = Uncertainity caused due to jitter
 
+#### Day-4 Lab Part-2 : Lab steps to configure OpenSTA for post-synth timing analysis
+
+Timing analysis is carried out outside the openLANE flow using OpenSTA tool. For this, pre_sta.conf is required to carry out the STA analysis. 
+
+pre_sta.conf file is as follows :
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6e868d7a-2f74-4876-91d0-d0883f8b611a)
+
+my_base.sdc file is as follows 
+![1  my_base sdc](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/d3beef08-42b3-4377-975a-02955137a653)
+
+Now we run open sta by using command `sta pre_sta.conf`
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/d6795e31-5034-49ff-b6c2-3069b536a1ba)
+
+After the run we got a slack violation 
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/be19452a-e7f1-41fb-8e8d-9c8db55f8f79)
+
+We can observe the nets has huge fanouts of 161 and 39 with huge slew. I tried out with various ways to reduce the slack but it did not reduce and I proceeded for CTS, post CTS I didnot get any violation.
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8c1f88de-ccb4-49d1-9e10-e83561157a2a)
+
 
 
 

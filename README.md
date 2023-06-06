@@ -515,5 +515,15 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 ```
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/652efed0-b54b-45da-a0b2-35c3e2fb9c2f)
 
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+
+### Chip Floor planning considerations
+
+#### IO placer revision
+
+Features of OpenLANE allows to make changes on the fly. PnR is an iterative flow and hence, we can make changes to the environment variables in the fly to observe the changes in our design. Now we can also change pin configuration on floorplan as well, earlier we have used `FP_IO_MODE` as 1 which indicates IO pins are placed at equidistance. We can also change this by using the command `set ::env(FP_IO_MODE) 2` we can observe IO pin configuration is now set to mode 2 which looks as follows 
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e28f402c-5980-4a83-9cf1-7ad29e0552d4)
+
 
 

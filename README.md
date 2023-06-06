@@ -820,6 +820,34 @@ Delay is a parameter that has huge impact on our cells in the design. Delay deci
 
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e1970154-2bcf-4f6c-b47e-9d8d1b85565f)
 
+#### Day-4 Lab Part-1 : Lab steps to configure synthesis settings to fix slack and include vsdinv
+
+In Previous step since we got huge values of WNS, TNS lets try to rerun the synthesis by doing some changes  in the switches 
+Use echo $::env(SYNTH_STRATEGY) to view the current value of synthesis strategy, 
+
+With `SYNTH_STRATEGY` of Delay 0, the tool will focus more on optimizing/minimizing the delay, index can be 0 to 3 where 3 is the most optimized for timing (sacrificing more area). `SYNTH_BUFFERING` of 1 ensures cell buffer will be used on high fanout cells to reduce delay due to high capacitance load. `SYNTH_SIZING` of 1 will enable cell sizing where cell will be upsize or downsized as needed to meet timing. `SYNTH_DRIVING_CELL` is the cell used to drive the input ports and is vital for cells with a lot of fan-outs since it needs higher drive strength (larger driving cell needed).
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/cbceced2-fd83-48cc-9db0-1358076a73ae)
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/331e5e3e-b21b-4739-85ae-09b07a0d292f)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/4342a9af-898c-411d-958f-8e6b2b8165b4)
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f1724c8c-a379-42ce-ab85-751ccd2e8954)
+
+We can observe by doing above changes even though area got increased slack became zero.
+
+Next we run floorplan step by step using the following commands :
+'''
+init_floorplan
+place_io
+global_placement_or
+tap_decap_or
+'''
+
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/dd850926-84e5-455f-88c3-e2735e3afaf3)
+
+Now we do placement using the command `detailed_placement` We can observe the check legality as pass.
+
+![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/65322097-5a8b-44f6-b515-d1affe1256da)
+
 
 
 

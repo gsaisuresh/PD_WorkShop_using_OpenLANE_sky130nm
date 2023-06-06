@@ -61,7 +61,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-1 : Lab steps to convert magic layout to std cell LEF](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-1--lab-steps-to-convert-magic-layout-to-std-cell-lef)
      - [Day-4 Lab Part-1 : Introduction to timing libs and steps to include new cell in synthesis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-1--introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
      - [Introduction to delay tables](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#introduction-to-delay-tables)
-     - [Day-4 Lab Part-1 : Lab steps to configure synthesis settings to fix slack and include vsdinv]()
+     - [Day-4 Lab Part-1 : Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-1--lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
    - [Timing analysis with ideal clocks using openSTA]()
      - [Setup timing analysis and introduction to flip-flop setup time]()
      - [Introduction to clock jitter and uncertainty]() 

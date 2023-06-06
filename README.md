@@ -71,8 +71,6 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS]()
      - [Day-4 Lab Part-3 : Lab steps to verify CTS runs]()
    - [Timing analysis with real clocks using openSTA]()
-     - [Setup timing analysis using real clocks]()
-     - [Hold timing analysis using real clocks]()
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()
@@ -921,6 +919,28 @@ In this stage clock is propagated and make sure that clock reaches each and ever
 - **clock skew** : Difference in the arrival times of clock signal at the clock pins of different flip flops.
 - **cross talk** : Cross talk is a phenomenon in which signal transmitted on one net cause an undesired effect on other net, cross talk can occur due to capacitive coupling, inductive coupling and conductive coupling.
 - **Clock Shielding** : Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim net and aggresor nets, the shield might be connected to VDD or ground since those will not switch. Shileding can also be done on critical data nets.
+
+#### Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS
+
+After extracting the modified verilog netlist after doing timing ECO, run_floorplan and run_placement and then run_cts. 
+
+`run_cts` and the other OpenLane commands are actually just calling the tcl proc (procedure) inside `/OpenLane/scripts/tcl_commands/`. This tcl procedure will then call OpenROAD to run the actual tool. For example, `run_cts` can be found inside `/OpenLane/scripts/tcl_commands/cts.tcl`, this tcl procedure will call OpenROAD and will call `/OpenLane/scripts/openroad/cts.tcl` which contains the OpenROAD commands to run TritonCTS.
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/87bbe0f9-efaf-4f90-afac-808b992ee5fe)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1fb29c1b-4980-45d3-90d2-8af3cf406a92)
+![3 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/f9dd668d-57c1-47d3-a452-5da79fe83cd5)
+![3 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c5063193-1aa7-4a37-82fc-d5f8d0965854)
+
+We can observe after CTS RUn Slack values are hold : 0.25 slack is MET and setup : 5.16 slack is MET
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/92b3c74b-0c6d-4dd8-97bb-9143650a29ad)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c4d43741-fe5d-45f1-ada9-dda679900316)
+
+
+
+
+
+
 
 
 

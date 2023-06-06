@@ -69,11 +69,12 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
    - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
      - [Clock tree routing and buffering using H-Tree algorithm](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-routing-and-buffering-using-h-tree-algorithm)
      - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-3--lab-steps-to-run-cts-using-tritoncts)
-     - [Day-4 Lab Part-3 : Lab steps to verify CTS runs]()
    - [Timing analysis with real clocks using openSTA]()
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries]()
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries and CTS assignment]()
+     
+ 5. [Day-05 : Routing]()
       
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
@@ -936,6 +937,41 @@ We can observe after CTS RUn Slack values are hold : 0.25 slack is MET and setup
 ![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/92b3c74b-0c6d-4dd8-97bb-9143650a29ad)
 ![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c4d43741-fe5d-45f1-ada9-dda679900316)
 
+### Timing analysis with real clocks using openSTA
+
+#### Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA
+
+Instead of invoking separate STA tool we invoke openROAD and do STA analysis within openlane flow so that we can use the environmental variables of Open LANE. In OpenROAD timing analysis is done in a different way we create a db and read it along with other files.
+
+The sequence of steps we follow are as follows : 
+
+```
+openroad
+read_lef
+read_def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/02-06_09-18/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -max $::env(LIB_FASTEST)
+read_liberty -min $::env(LIB_SLOWEST)
+link_design picorv32a
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock (all_clocks)
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e6f6798a-409b-4c4f-b4a2-2a247e78d9f5)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a8864949-f265-4f2f-9f83-9547476aa1b4)
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8685b4f8-5c1c-4725-92e5-e9e7840cfa50)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6a610498-d734-442e-a511-37d17ac643bb)
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e2089cfe-a528-40ab-91f9-8b68c84ba9ab)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/cce52bca-5576-4ca2-8643-2082c581c7c0)
+
+Now We look at setup and hold slack values 
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/646f7e2b-9068-40f5-9d9b-2394e14ea2b1)
+![7 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2d11e145-194a-4e8a-ad6c-9b303696a43d)
+
+After performing Timing analysis, my slack values are Setup Slack : 6.745 Slack is MET, Hold Slack : 1.645 slack is MET
 
 
 

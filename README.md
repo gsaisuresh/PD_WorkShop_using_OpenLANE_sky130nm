@@ -40,7 +40,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
         - [Propagation delay and transition time](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#propagation-delay-and-transition-time) 
      
 3. [Day 3 - Design library cell using Magic Layout and ngspice characterization](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
-   - [Labs for CMOS inverter ngspice simulations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#chip-floor-planning-considerations)
+   - [Labs for CMOS inverter ngspice simulations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#labs-for-cmos-inverter-ngspice-simulations)
      - [IO placer revision]()
      - [SPICE deck creation for CMOS inverter]()
      - [SPICE simulation lab for CMOS inverter]()

@@ -802,10 +802,10 @@ If we dont want a new folder with new date to be created then we can use existin
 ![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2cdcee82-1bea-4c50-86dd-d902d248a862)
 
 Include the below command to include the additional lef into the flow:
-'''   
+``` 
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]  
 add_lefs -src $lefs
-'''
+```
 
 ![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3ae175a2-2ffb-4984-8abb-0cb9cac86b64)
 
@@ -835,12 +835,12 @@ With `SYNTH_STRATEGY` of Delay 0, the tool will focus more on optimizing/minimiz
 We can observe by doing above changes even though area got increased slack became zero.
 
 Next we run floorplan step by step using the following commands :
-'''
+```
 init_floorplan
 place_io
 global_placement_or
 tap_decap_or
-'''
+```
 
 ![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/dd850926-84e5-455f-88c3-e2735e3afaf3)
 
@@ -849,9 +849,9 @@ Now we do placement using the command `detailed_placement` We can observe the ch
 ![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/65322097-5a8b-44f6-b515-d1affe1256da)
 
 Now we can check the layout by invoking magic from the results/placement directory
-'''
+```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
-'''
+```
 
 ![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a2aeff69-9613-4a27-884c-768c5c2006b2)
 ![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/90307142-eb34-45fb-905a-6df43b4381d0)
@@ -870,9 +870,9 @@ Pre-layout STA will not yet include effects of clock buffers and net-delay due t
 
 Setup timing analysis equation is:
 
-'''
+```
 Θ < T - S
-'''
+```
 
 where 
 - Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop

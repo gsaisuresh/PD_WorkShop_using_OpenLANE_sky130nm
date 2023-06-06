@@ -68,7 +68,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-2 : Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-2--lab-steps-to-configure-opensta-for-post-synth-timing-analysis)    
    - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
      - [Clock tree routing and buffering using H-Tree algorithm](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#clock-tree-routing-and-buffering-using-h-tree-algorithm)
-     - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS]()
+     - [Day-4 Lab Part-3 : Lab steps to run CTS using TritonCTS](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-3--lab-steps-to-run-cts-using-tritoncts)
      - [Day-4 Lab Part-3 : Lab steps to verify CTS runs]()
    - [Timing analysis with real clocks using openSTA]()
      - [Day-4 Lab Part-4 : Lab steps to analyze timing with real clocks using OpenSTA]()

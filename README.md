@@ -45,7 +45,6 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [SPICE deck creation for CMOS inverter](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-creation-for-cmos-inverter)
      - [SPICE deck Netlsit Description](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#spice-deck-netlsit-description)
      - [Switching Threshold Vm](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#switching-threshold-vm)
-     - [Static and dynamic simulation of CMOS inverter]()
      - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign]()
    - [Inception of Layout and CMOS fabrication process]()
       - [16-mask CMOS Process]()
@@ -547,6 +546,27 @@ Complete description of NMOS and PMOS transistors are available in model file, a
 If we see irrespective of sizes of PMOS the shape of CMOS inverter simulation remains same, this tells us CMOS inverter is a very robust device. One of the parameters that define the robustness of CMOS is switching threshold (Vm). Switching Threshold means the point at which the device switches. Switching Threshold is a point at which Vin=Vout. At this point both pmos and nmos are in saturation, means both are turned on and have high chances of current flowing driectly from VDD to Ground called Leakage current.
 
 ![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/1d5f4502-6f0f-4cb7-bcb6-1e45af8c50b4)
+
+#### Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign
+
+Inorder to view the CMOS Inverter layout in magic and integrate it with picorv32a design first we have to gitclone the vsdstdcelldesign within the `openlane_working_dir/openlane` directory. The command to do this is as follows : `git clone https://github.com/nickson-jose/vsdstdcelldesign.git`.
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b620cceb-0df9-493a-8311-12b123740f32)
+
+Wwe can observe the design has been cloned and is available in openlane directory now 
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/90d1936b-e5ad-496d-9d1c-8c5613c5325d)
+
+To invoke magic to view the sky130_inv.mag file, the sky130A.tech file must be included in the command along with its path. To ease up the complexity of this command, the tech file can be copied from the magic folder to the vsdstdcelldesign folder
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/b720d3d2-bb79-41c2-9c1e-6cd1b7267ec6)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/91834678-818c-412b-b8c6-ef15d23cc0b2)
+
+Now mag file can be invoked in magic using the command  `magic -T sky130A.tech sky130_inv.mag &` The & is used to free the command prompt, if we dont use the & magic will keep the prompt line busy.
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/22a204bb-73c6-4979-934e-f529e1d0313d)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/6ad32c01-4c88-4994-b9e1-190931adf55f)
+
 
 
 

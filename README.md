@@ -56,7 +56,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
        - [Magic DRC Lab](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#magic-drc-lab)
 
 4. [Day 4 - Pre-layout timing analysis and importance of good clock tree](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4---pre-layout-timing-analysis-and-importance-of-good-clock-tree)
-   - [Timing modelling using delay tables]()
+   - [Timing modelling using delay tables](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-modelling-using-delay-tables)
      - [Day-4 Lab Part-1 : Lab steps to convert grid info to track info]()
      - [Day-4 Lab Part-1 : Lab steps to convert magic layout to std cell LEF]()
      - [Day-4 Lab Part-1 : Introduction to timing libs and steps to include new cell in synthesis]()

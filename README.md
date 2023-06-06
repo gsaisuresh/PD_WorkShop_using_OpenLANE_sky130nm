@@ -848,6 +848,18 @@ Now we do placement using the command `detailed_placement` We can observe the ch
 
 ![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/65322097-5a8b-44f6-b515-d1affe1256da)
 
+Now we can check the layout by invoking magic from the results/placement directory
+'''
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+'''
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a2aeff69-9613-4a27-884c-768c5c2006b2)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/90307142-eb34-45fb-905a-6df43b4381d0)
+
+Since the custom standard cell has been plugged into the design,in the openlane flow, it would be visible in the layout.
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/36aaf164-9da5-4824-b23b-90b188c219ad)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/9be1e564-2cdf-4873-bda0-206393afda6c)
+
 
 
 

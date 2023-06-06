@@ -743,6 +743,46 @@ Once the tech file has been modified for drc, we load the tech file in tkcon win
 
 #### Day-4 Lab Part-1 : Lab steps to convert grid info to track info
 
+OpenLANE is a PnR Tool and PnR tool does not need all informations from the .mag file like the logic part, but only information which is required is PnR boundaries, power/ground ports, and input/output ports. This is what a LEF file actually contains. So the next objective is to extract the LEF file from .mag file.
+
+Guidelines of the PnR tool for the standard cells:
+- The input and output ports must lies on the intersection of the horizontal and vertical tracks.
+- The width of the standard cell must be odd multiple of the tracks horizontal pitch and height must be odd multiples of tracks vertical pitch
+
+Track :A path or a line on which metal layers are drawn for routing. Track is used to define the height of the standard cell.
+This information is defined in tracks.info. The syntax is `metal_layer direction offset spacing`
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/461748dc-26f9-4aba-a083-4f3fd4099545)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/4f05079e-4861-4257-b294-01c9d499138e)
+
+Use `help grid` command inside the tkcon window to know what all arguments a grid needs.
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/8077670b-5838-457d-a4a0-3b8f51be8ef7)
+
+Now let us try to change the dimensions of grid boxes, by this we are converging the grid definition required to the track definition
+
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/e3e3c346-46f6-4f57-a6ed-076aecd5c9c0)
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a9920472-2db3-4270-a678-90342c98faa2)
+
+The grids show where the routing for the local-interconnet layer can only happen, the distance of the grid lines are the required pitch of the wire. Below, we can see that the guidelines are satisfied:
+
+![8](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/bc711143-ae6e-4773-a651-3179716fac4c)
+![9](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/55d74686-5d48-4e04-a5aa-d03a97702fe6)
+
+#### Day-4 Lab Part-1 : Lab steps to convert magic layout to std cell LEF
+
+Now lets save cell as `sky130_vsdinv.mag`
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/58d66f6a-c480-416f-8438-9c399148c77a)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c794c70b-8847-41dc-8eca-587f15030062)
+
+Now we etract lef file using command `lef write` and if we do'nt specify any name lef file is created on name of our cell design i.e `sky130_vsdinv.lef`
+
+![5](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7056b011-4575-4124-adec-d280a6a20f5c)
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a82b4df8-c256-4bc1-8573-0cc7958b6cf3)
+![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/388fe9ea-ba6a-4c30-bb01-0d28736492e7)
+
+
 
 
 

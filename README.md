@@ -1078,8 +1078,13 @@ A DEF file will be formed `results/routing/picorv32a.def` Open the DEF file outp
 ![8 2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/4b4c6491-037d-4f03-a5f9-263337e81906)
 ![9 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7e80df53-bd3d-4e9b-b024-2199bc10e0f5)
 
-Extract SPEF file and perform post-routing STA and Finally, run: `run_magic`. This will create the GDS file under: runs/[date]/results/routing/picorv32.gds
+Finally Extract SPEF file and perform post-routing STA and Finally, run: `run_magic`. This will create the GDS file under: runs/[date]/results/routing/picorv32.gds
 
+This completes our 5-Day Workshop
+
+Instructors 
+Kunal Gosh, VSD Corporation
+Nickson-Jose, VSD Corporation
 
 
 

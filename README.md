@@ -877,11 +877,25 @@ Setup timing analysis equation is:
 where 
 - Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop
 - T = Time period
--  S = Setup time
+- S = Setup time
 
+#### Introduction to clock jitter and uncertainty
 
+Jitter is a temperory variation in clock period. We will model this using one more parameter called as uncertainity
 
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/64e0df96-3a82-4551-ae77-9954fa8d9187)
 
+Setup timing analysis equation including jitter is:
+
+```
+Θ < T - S - SU
+```
+
+where 
+- Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop
+- T = Time period
+- S = Setup time
+- SU = Uncertainity caused due to jitter
 
 
 

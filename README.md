@@ -602,6 +602,28 @@ Similarly we can do the same and observe whether source of PMOS is connected to 
 ![5 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/7a737e37-ea20-40df-8961-b6e07512725d)
 ![6 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5bc5c3f7-e14a-4293-86c1-945badeac179)
 
+#### Day-3 Lab Part-2 : Lab steps to create std cell layout and extract spice netlist
+
+For a PnR tool to correctly place and route a block (a macro or a std. cell), it doesn't need to know entire layout information of the block; just the pin positions, PR boundary is sufficient. These minimal and abstracted information is provided to the tool by the Library Exchange Format (LEF) file. LEF file also serves the purpose of protecting intellectual property.
+
+In order to know logical functionality of this inverter we would first extract the spice and post that we will do simulations on spice in ngspice open source tool. First step in this process is to create an .ext file(extraction file) using the command `extract all` in tkcon window. 
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/ee0dc30f-f515-4080-9a0e-9177e47fde97)
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/ebf1eff3-342e-49ac-aabd-6d6e42768cf1)
+
+Next we will use this .ext file to create the spice file which is to be used by ngspice tool using the below commands:
+- `ext2spice cthresh 0 rthresh 0` : extracts parasatic capcitances also since these are actual layers, this command doesnot create any file. 
+- `ext2spice` : creates a file sky130_inv.spice.
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/5b9eda28-6396-4327-83fb-adb8ccc0d4a7)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/caf75238-dc81-4b76-b2d6-05cd00bf295e)
+![4 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/19b9864c-1e1b-4b87-84ae-b377f03051c9)
+
+
+
+
+
+
 
 
 

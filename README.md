@@ -782,6 +782,41 @@ Now we etract lef file using command `lef write` and if we do'nt specify any nam
 ![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/a82b4df8-c256-4bc1-8573-0cc7958b6cf3)
 ![7](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/388fe9ea-ba6a-4c30-bb01-0d28736492e7)
 
+#### Day-4 Lab Part-1 : Introduction to timing libs and steps to include new cell in synthesis
+
+![6](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2faa897d-43aa-42aa-b210-dec321f42d0a)
+
+The fast, slow and typical lib files are defined across different process corners for different temperature, for different voltage values. 
+
+In order to include the new standard cell in the synthesis, copy the sky130_vsdinv.lef file to the designs/picorv32a/src directory
+Since abc maps the standard cell to a library abc there must be a library that defines the CMOS inverter. 
+In the design's config.tcl file add the below line to point to the lef location which is required during spice extraction.
+`set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]`
+
+Updated config.tcl file is as follows :
+
+![image](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/53485719-20d1-43dd-8528-d0725bc1dce3)
+
+If we dont want a new folder with new date to be created then we can use existing floder with -overwrite option to overwrite the results
+
+![1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/2cdcee82-1bea-4c50-86dd-d902d248a862)
+
+Include the below command to include the additional lef into the flow:
+'''   
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]  
+add_lefs -src $lefs
+'''
+
+![2](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3ae175a2-2ffb-4984-8abb-0cb9cac86b64)
+
+Now we perform `run_synthesis`
+
+![3](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/c4d65144-de09-4511-8039-336c61d670e6)
+![4](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3b5edf79-115f-4cee-9f9b-0e1c1ea6e625)
+
+
+
+
 
 
 

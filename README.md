@@ -74,7 +74,7 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
      - [Day-4 Lab Part-4 : Lab steps to execute OpenSTA with right timing libraries](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-execute-opensta-with-right-timing-libraries)
      - [Day-4 Lab Part-4 : Lab steps to observe impact of bigger CTS buffer on setup and hold timing](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#day-4-lab-part-4--lab-steps-to-observe-impact-of-bigger-cts-buffer-on-setup-and-hold-timing)
      
- 5. [Day-05 : Routing]()
+ 5. [Day-05 : PDN and Routing]()
       
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
@@ -1037,6 +1037,17 @@ Skew values are also improving which are as follows :
 We can get back clkbuf_1 into the buffer list by doing the following steps :
 
 ![10](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/3b7a9017-ef33-4643-998b-5e0ce5c61aab)
+
+### Day-05 : PDN and Routing
+
+Unlike the general ASIC flow, Power Distribution Network generation is not a part of floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses:
+
+command used for PDN generation is : `gen_pdn`
+
+If we want to continune from previous results we dont want to use -overwrite option
+
+![1 1](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/assets/135144937/46cc5aa2-5b4f-4497-9aa4-c207140a9b49)
+
 
 
 

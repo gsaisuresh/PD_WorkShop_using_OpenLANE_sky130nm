@@ -39,7 +39,23 @@ This project is done as part of VLSI Physical Design Work-Shop organized by VLSI
         - [Timing threshold definitions](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#timing-threshold-definitions)
         - [Propagation delay and transition time](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#propagation-delay-and-transition-time) 
      
-
+3. [Day 3 - Design library cell using Magic Layout and ngspice characterization]()
+   - [Chip Floor planning considerations](https://github.com/gsaisuresh/PD_WorkShop_using_OpenLANE_sky130nm/blob/main/README.md#chip-floor-planning-considerations)
+     - [IO placer revision]()
+     - [SPICE deck creation for CMOS inverter]()
+     - [SPICE simulation lab for CMOS inverter]()
+     - [Switching Threshold Vm]()
+     - [Static and dynamic simulation of CMOS inverter]()
+     - [Day-3 Lab Part-1 : Lab steps to git clone vsdstdcelldesign]()
+   - [Inception of Layout and CMOS fabrication process]()
+      - [16-mask CMOS Process]()
+      - [Day-3 Lab Part-2 : Lab introduction to Sky130 basic layers layout and LEF using inverter]()
+      - [Day-3 Lab Part-2 : Lab steps to create std cell layout and extract spice netlist]()
+   - [Sky130 Tech File Labs]()
+       - [Lab steps to create final SPICE deck using Sky130 tech]()
+       - [Lab steps to characterize inverter using sky130 model files]()
+       - [Magic DRC Lab]()
+     
 ## Day-1 Inception of Opensource EDA, OpenLANE and Sky130 PDK
 
 ### How to Talk to computers
